@@ -11,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Background
+  - Obstacles
+  - Characters
+  - Foreground
   - 
   - 
   - 
@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 874863587
+    locked: 0
+  - name: Floor
+    uniqueID: 4164465435
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Characters
+    uniqueID: 1920238163
+    locked: 0
+  - name: Foreground
+    uniqueID: 2997574817
     locked: 0
