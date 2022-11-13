@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GnomeMinigameManager : MinigameManager
 {
-    
+
+    public Texture2D cursorTexture;
     // all gnome minigame logic here
 
     protected void Start()
@@ -12,6 +13,7 @@ public class GnomeMinigameManager : MinigameManager
        base.Start();
        Debug.Log(_flowManagerInstance.playerID);
        StartCoroutine(Complete());
+       Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
     }
 
     IEnumerator Complete()
