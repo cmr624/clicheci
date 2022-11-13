@@ -16,7 +16,7 @@ public class GnomeMinigameManager : MinigameManager
     {
        base.Start();
        Debug.Log(_flowManagerInstance.playerID);
-       Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+       //Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
 
        StartCoroutine(TimerComplete());
     }
