@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
 {
 
-    public string playerID = "playerID";
+    public string playerID = "the other cm";
     public int score = 0;
     public string defaultScene;
     
@@ -22,12 +22,14 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
 
     public void LoadNextScene()
     {
+        MMSceneLoadingManager.LoadScene(minigames[currentMinigameIndexOrdered], "LoadingScreen");
         // remove if statement laterr
+        /*
         if (currentMinigameIndexOrdered < 1)
         {
             MMSceneLoadingManager.LoadScene(minigames[currentMinigameIndexOrdered], "LoadingScreen");
             currentMinigameIndexOrdered++;
-        }
+        }*/
     }
     
     // on complete, load back the default scene.
