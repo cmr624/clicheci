@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5576568862333700403}
   - component: {fileID: 216329255038860960}
+  - component: {fileID: 9139600376401260011}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 299159326240459948}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7134172605122214959}
   m_RootOrder: 2
@@ -82,6 +83,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &9139600376401260011
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299159326240459948}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d976af439c3546eb83e1beb94086eab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1638903299076280218
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +277,7 @@ Animator:
   m_GameObject: {fileID: 1720510709603182907}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d767884e3a5a4f73bc5e3bfe985036a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -293,7 +313,7 @@ Transform:
   m_GameObject: {fileID: 5582368038550190504}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1.43, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7134172605122214959}
   m_RootOrder: 4
@@ -359,7 +379,7 @@ Animator:
   m_GameObject: {fileID: 5582368038550190504}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d51225c9d5dc941a0b947e99e3fe4947, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -429,18 +449,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Rock, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   onDeselected:
     m_PersistentCalls:
       m_Calls: []
@@ -464,7 +472,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5774197126032622786}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 347013242dca7c44fb5001793033ea59, type: 3}
   m_Name: 
@@ -542,8 +550,8 @@ MonoBehaviour:
     CurvePingPong: 0
     PauseMin: 0
     PauseMax: 0
-    LimitedTime: 0
-    LimitedTimeTotal: 0
+    LimitedTime: 1
+    LimitedTimeTotal: 2
     LimitedTimeFalloff:
       serializedVersion: 2
       m_Curve:
@@ -569,7 +577,7 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     LimitedTimeResetValue: 1
-    LimitedTimeLeft: 0
+    LimitedTimeLeft: 2
     NoiseFrequencyMin: {x: 0, y: 0, z: 0}
     NoiseFrequencyMax: {x: 1, y: 1, z: 1}
     NoiseShiftMin: {x: 0, y: 0, z: 0}
@@ -824,6 +832,7 @@ GameObject:
   - component: {fileID: 193965154155217267}
   - component: {fileID: 6063970963705262716}
   - component: {fileID: 1013215408229444724}
+  - component: {fileID: 811502591018348680}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -937,13 +946,31 @@ MonoBehaviour:
   Coin: {fileID: 5582368038550190504}
   CoinData:
     scoreValue: 50
-    probability: 0.6
+    probability: 50
   Snake: {fileID: 299159326240459948}
   SnakeData:
     scoreValue: 10
-    probability: 0.3
+    probability: 25
   Gnome: {fileID: 1720510709603182907}
   GnomeData:
     scoreValue: 10
-    probability: 0.1
-  RespawningPrefab: {fileID: 5774197126032622786}
+    probability: 25
+--- !u!95 &811502591018348680
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9009444540134123847}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 807e645b598994b4b8d90ab3e03c9a26, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
