@@ -5,7 +5,6 @@
       <Path>../../../../Library/Unity/cache/packages/packages.unity.com/com.unity.test-framework@1.1.27</Path>
     </attachedFolders>
     <explicitIncludes>
-      <Path>Assets</Path>
       <Path>Library/PackageCache/com.unity.2d.animation@5.0.6</Path>
       <Path>Library/PackageCache/com.unity.2d.common@4.0.3</Path>
       <Path>Library/PackageCache/com.unity.2d.path@4.0.1</Path>
@@ -62,7 +61,6 @@
       <Path>Library/PackageCache/com.unity.ugui@1.0.0</Path>
       <Path>Packages</Path>
       <Path>ProjectSettings</Path>
-      <Path>../../../../Library/Unity/cache/packages/packages.unity.com/com.unity.test-framework@1.1.27</Path>
     </explicitIncludes>
     <explicitExcludes>
       <Path>.git</Path>

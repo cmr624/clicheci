@@ -17,6 +17,8 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
     public float roundTime = 20f;
 
     private Coroutine _timer;
+
+    public GameObject RespawningRockPrefab;
     protected void Start()
     {
        _flowManagerInstance = GameFlowManager.Instance;
@@ -26,6 +28,19 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
        _timer = StartCoroutine(TimerComplete());
     }
 
+    public float RespawnInSecondsTimer = 4f;
+
+    public void Respawn(GameObject go)
+    {
+       StartCoroutine(RespawnTimer(RespawnInSecondsTimer, go)); 
+    }
+
+    private IEnumerator RespawnTimer(float timeInSeconds, GameObject go)
+    {
+       yield return new WaitForSeconds(timeInSeconds);
+       Instantiate(RespawningRockPrefab, go.transform.position, go.transform.rotation);
+       Destroy(go);
+    }
     public void AddScore(int score)
     {
         _score += score;
@@ -39,6 +54,13 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
     IEnumerator TimerComplete()
     {
         yield return new WaitForSeconds(roundTime);
+        
+        // ending sequence
+        
+        // trigger an animation. in 5 seconds, go back home
+        
+        
+        yield return new WaitForSeconds(5f);
        _flowManagerInstance.MinigameComplete();
     }
     
