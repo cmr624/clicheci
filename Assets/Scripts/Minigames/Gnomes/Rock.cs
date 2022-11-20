@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using DG;
+using MoreMountains.Feedbacks;
 
 public class Rock : MonoBehaviour
 {
@@ -28,14 +29,19 @@ public class Rock : MonoBehaviour
         _rockAnimator = GetComponent<Animator>();
     }
 
-    IEnumerator SelectSpawnedItem(int choice){
-        yield return new WaitForSeconds(1f);
+    IEnumerator SelectSpawnedItem(float numberOfSeconds){
+        
+        
+        yield return new WaitForSeconds(numberOfSeconds);
+        float[] weights = {CoinData.probability, SnakeData.probability, GnomeData.probability};
+        int choice = GetRandomWeightedIndex(weights);
         if (choice == 0)
         {
             Coin.SetActive(true);
             Animator coinAnimator = Coin.GetComponent<Animator>();
             coinAnimator.Play("coinSpin");
             GnomeMinigameManager.Instance.AddScore(CoinData.scoreValue);
+            GnomeMinigameManager.Instance.CoinFeedback.PlayFeedbacks();
         }
         else if (choice == 1)
         {
@@ -49,25 +55,20 @@ public class Rock : MonoBehaviour
             Gnome.SetActive(true);
             Animator gnomeAnimator = Gnome.GetComponent<Animator>();
             gnomeAnimator.Play("gnomeMoon");
-            
             GnomeMinigameManager.Instance.AddScore(GnomeData.scoreValue);
+            GnomeMinigameManager.Instance.GnomeFeedback.PlayFeedbacks();
         }
         _sprite.transform.gameObject.GetComponent<SpriteRenderer>().enabled = false;// SetActive(false);
         
         GnomeMinigameManager.Instance.Respawn(gameObject.transform.root.gameObject);
     }
 
+
     public void Spawn()
     {
-        
-        float[] weights = {CoinData.probability, SnakeData.probability, GnomeData.probability};
-        int choice = GetRandomWeightedIndex(weights);
-        
-        
        _rockAnimator.SetTrigger("clicked");
-        
-        StartCoroutine(SelectSpawnedItem(choice));
-
+       //RockBreakFeedback.PlayFeedbacks();
+        StartCoroutine(SelectSpawnedItem(.8f));
        // try that? 
     }
 
