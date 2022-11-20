@@ -20,7 +20,7 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
     protected void Start()
     {
        _flowManagerInstance = GameFlowManager.Instance;
-       Debug.Log(_flowManagerInstance.playerID);
+       //Debug.Log(_flowManagerInstance.playerID);
        //Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
 
        _timer = StartCoroutine(TimerComplete());
