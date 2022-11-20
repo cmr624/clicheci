@@ -19,6 +19,9 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
     private Coroutine _timer;
 
     public GameObject RespawningRockPrefab;
+
+
+
     protected void Start()
     {
        _flowManagerInstance = GameFlowManager.Instance;
@@ -41,6 +44,7 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
        Instantiate(RespawningRockPrefab, go.transform.position, go.transform.rotation);
        Destroy(go);
     }
+    
     public void AddScore(int score)
     {
         _score += score;
