@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using DG;
+using Lean.Touch;
 using MoreMountains.Feedbacks;
 
 public class Rock : MonoBehaviour
@@ -58,8 +59,10 @@ public class Rock : MonoBehaviour
             GnomeMinigameManager.Instance.AddScore(GnomeData.scoreValue);
             GnomeMinigameManager.Instance.GnomeFeedback.PlayFeedbacks();
         }
-        _sprite.transform.gameObject.GetComponent<SpriteRenderer>().enabled = false;// SetActive(false);
-        
+        _sprite.enabled = false;// SetActive(false);
+        // set the lean touch manager to off too
+        transform.GetComponentInParent<LeanSelectableByFinger>().enabled = false;
+
         GnomeMinigameManager.Instance.Respawn(gameObject.transform.root.gameObject);
     }
 
