@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Timers;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 using MoreMountains.Tools;
@@ -21,6 +22,10 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
     public GameObject RespawningRockPrefab;
 
 
+    public MMF_Player RockBreakFeedback;
+    public MMF_Player CoinFeedback;
+    public MMF_Player GnomeFeedback;
+    public MMF_Player SnakeFeedback;
 
     protected void Start()
     {
