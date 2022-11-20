@@ -13,6 +13,7 @@ public class Rock : MonoBehaviour
     // 10% chance for gnome
     // 20% chance for snake
     private SpriteRenderer _sprite;
+    private Animator _rockAnimator;
 
     public GameObject Coin;
     public SpawnedObjectData CoinData;
@@ -24,6 +25,36 @@ public class Rock : MonoBehaviour
     private void Start()
     {
         _sprite = GetComponent<SpriteRenderer>();
+        _rockAnimator = GetComponent<Animator>();
+    }
+
+    IEnumerator SelectSpawnedItem(int choice){
+        yield return new WaitForSeconds(1f);
+        if (choice == 0)
+        {
+            Coin.SetActive(true);
+            Animator coinAnimator = Coin.GetComponent<Animator>();
+            coinAnimator.Play("coinSpin");
+            GnomeMinigameManager.Instance.AddScore(CoinData.scoreValue);
+        }
+        else if (choice == 1)
+        {
+            Snake.SetActive(true);
+            Animator snakeAnimator = Snake.GetComponent<Animator>();
+            snakeAnimator.Play("redSnakeAnim");
+            GnomeMinigameManager.Instance.AddScore(SnakeData.scoreValue);
+        }
+        else if (choice == 2)
+        {
+            Gnome.SetActive(true);
+            Animator gnomeAnimator = Gnome.GetComponent<Animator>();
+            gnomeAnimator.Play("gnomeMoon");
+            
+            GnomeMinigameManager.Instance.AddScore(GnomeData.scoreValue);
+        }
+        _sprite.transform.gameObject.GetComponent<SpriteRenderer>().enabled = false;// SetActive(false);
+        
+        GnomeMinigameManager.Instance.Respawn(gameObject.transform.root.gameObject);
     }
 
     public void Spawn()
@@ -32,25 +63,12 @@ public class Rock : MonoBehaviour
         float[] weights = {CoinData.probability, SnakeData.probability, GnomeData.probability};
         int choice = GetRandomWeightedIndex(weights);
         
-        // add in a rock breaking animation
-        if (choice == 0)
-        {
-            Coin.SetActive(true);
-            GnomeMinigameManager.Instance.AddScore(CoinData.scoreValue);
-        }
-        else if (choice == 1)
-        {
-            Snake.SetActive(true);
-            GnomeMinigameManager.Instance.AddScore(SnakeData.scoreValue);
-        }
-        else if (choice == 2)
-        {
-            Gnome.SetActive(true);
-            GnomeMinigameManager.Instance.AddScore(GnomeData.scoreValue);
-        }
-        _sprite.transform.gameObject.GetComponent<SpriteRenderer>().enabled = false;// SetActive(false);
         
-        GnomeMinigameManager.Instance.Respawn(gameObject.transform.root.gameObject);
+       _rockAnimator.SetTrigger("clicked");
+        
+        StartCoroutine(SelectSpawnedItem(choice));
+
+       // try that? 
     }
 
    
