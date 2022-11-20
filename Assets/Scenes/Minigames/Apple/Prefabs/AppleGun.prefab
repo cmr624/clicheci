@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1186291391421757260}
   - component: {fileID: 1186291391421757261}
+  - component: {fileID: 2166524657897413804}
   m_Layer: 0
   m_Name: AppleGun
   m_TagString: Untagged
@@ -82,3 +83,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2166524657897413804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186291391421757259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9501145d0f924c3ebc77941ba3b5a9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AppleProjectile: {fileID: 1319301440957241876, guid: f52677194eac34d45ba7446da705750b, type: 3}

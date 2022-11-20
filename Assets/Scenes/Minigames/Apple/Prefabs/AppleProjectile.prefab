@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6591663212655513061}
   - component: {fileID: 4009302657997654683}
   - component: {fileID: 5479461644028434817}
+  - component: {fileID: 5964334504790262788}
   m_Layer: 0
   m_Name: AppleProjectile
   m_TagString: Untagged
@@ -80,6 +81,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5964334504790262788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319301440957241876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26c50c291275244bc81561e2430bf6ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5684854460611861385
 GameObject:
   m_ObjectHideFlags: 0
