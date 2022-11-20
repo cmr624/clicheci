@@ -21,7 +21,6 @@ public class Rock : MonoBehaviour
     public GameObject Gnome;
     public SpawnedObjectData GnomeData;
 
-
     private void Start()
     {
         _sprite = GetComponent<SpriteRenderer>();
@@ -32,34 +31,37 @@ public class Rock : MonoBehaviour
         
         float[] weights = {CoinData.probability, SnakeData.probability, GnomeData.probability};
         int choice = GetRandomWeightedIndex(weights);
+        
+        // add in a rock breaking animation
         if (choice == 0)
         {
             Coin.SetActive(true);
             GnomeMinigameManager.Instance.AddScore(CoinData.scoreValue);
-            _sprite.transform.gameObject.SetActive(false);
         }
         else if (choice == 1)
         {
             Snake.SetActive(true);
             GnomeMinigameManager.Instance.AddScore(SnakeData.scoreValue);
-            _sprite.transform.gameObject.SetActive(false);
         }
         else if (choice == 2)
         {
             Gnome.SetActive(true);
             GnomeMinigameManager.Instance.AddScore(GnomeData.scoreValue);
-            _sprite.transform.gameObject.SetActive(false);
         }
-
-        Respawn();
+        _sprite.transform.gameObject.GetComponent<SpriteRenderer>().enabled = false;// SetActive(false);
+        
+        GnomeMinigameManager.Instance.Respawn(gameObject.transform.root.gameObject);
     }
 
-    private void Respawn()
-    {
-        Debug.Log("");
-    }
+   
+    // ty < 3 https://forum.unity.com/threads/random-numbers-with-a-weighted-chance.442190/
     
-    // ty https://forum.unity.com/threads/random-numbers-with-a-weighted-chance.442190/
+    // [.6, .5, .3, .2]
+    // 16
+    // 6 / 16
+    // 5 / 16
+    // 3 / 16
+    // 2 / 16
     public int GetRandomWeightedIndex(float[] weights)
     {
         if (weights == null || weights.Length == 0) return -1;
@@ -98,22 +100,3 @@ public class Rock : MonoBehaviour
    
 }
 
-
-/*
- *  float p = Random.Range(0f, 1f);
-           if (p < coinProbability)
-           {
-               // coin
-               // TODO change all these to prefabs
-           }
-           else if (p >= coinProbability && p < gnomeProbability)
-           {
-               // gnome
-           }
-           else
-           {
-               // snake
-           }
- *
- * 
- */
