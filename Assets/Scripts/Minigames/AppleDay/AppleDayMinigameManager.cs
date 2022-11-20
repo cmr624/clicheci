@@ -14,10 +14,18 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
         _flowManagerInstance = GameFlowManager.Instance;
     }
 
+
+
+    public GameObject DoctorPrefab;
     public void DoctorSpawn()
     {
-        // 4l - 1l, 4r-1r
-        // input the location
-        // depending on 
+        
+        
+        
+    }
+
+    private void DoctorMove()
+    {
+        
     }
 }
