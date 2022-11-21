@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Feel/MMTools/Tools/MMSceneLoading/LoadingScreens/LoadingScreen.unity
     guid: 888394d52616e5e42b3b54c3f2bbd3eb
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Apple/AppleDay.unity
+    guid: 03896f7f64a7f4c2db10947a8b0bbd91
   m_configObjects: {}

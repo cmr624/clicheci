@@ -12,5 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fd40b7bb06746d5ae1b4104ea4179e, type: 3}
   m_Name: Sequence1
   m_EditorClassIdentifier: 
-  locations: 0
-  TimersPerSequence: []
+  Sequence:
+  - Location: 4l
+    TimerToSpawn: 1
+    Speed: 9.8
+  - Location: 3r
+    TimerToSpawn: 4
+    Speed: -14.88
+  - Location: 2l
+    TimerToSpawn: 5
+    Speed: 12.2
+  - Location: 1r
+    TimerToSpawn: 2
+    Speed: -21.58
