@@ -20,6 +20,12 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
         Debug.Log(Instance.score);
     }
 
+    public void LoadScene(string name)
+    {
+        
+        MMSceneLoadingManager.LoadScene(name, "LoadingScreen");
+    }
+    
     public void LoadNextScene()
     {
         MMSceneLoadingManager.LoadScene(minigames[currentMinigameIndexOrdered], "LoadingScreen");
