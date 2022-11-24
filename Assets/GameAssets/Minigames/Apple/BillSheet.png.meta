@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: e8aff088994836946bc34f98c7f0dbee
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6771185078409337535
+    second: BillSheet_0
+  - first:
+      213: -2472673960154125572
+    second: BillSheet_1
+  - first:
+      213: 2733338369646274932
+    second: BillSheet_2
+  - first:
+      213: 823718086570051503
+    second: BillSheet_3
+  - first:
+      213: 8173902604917829215
+    second: BillSheet_4
+  - first:
+      213: -624755447723901776
+    second: BillSheet_5
+  - first:
+      213: 3220510966436037750
+    second: BillSheet_6
+  - first:
+      213: -4960180441859109014
+    second: BillSheet_7
+  - first:
+      213: -5276891349677079317
+    second: BillSheet_8
+  - first:
+      213: 4080292705409864583
+    second: BillSheet_9
+  - first:
+      213: -4375422658602308533
+    second: BillSheet_10
+  - first:
+      213: 3267290222011897203
+    second: BillSheet_11
+  - first:
+      213: -1163096850307404484
+    second: BillSheet_12
+  - first:
+      213: -5185891930193367797
+    second: BillSheet_13
+  - first:
+      213: -310444025150606755
+    second: BillSheet_14
+  - first:
+      213: 4463979659842035582
+    second: BillSheet_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BillSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 484.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1456cf4eb0be702a0800000000000000
+      internalID: -6771185078409337535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 484.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfaa7af422c4fadd0800000000000000
+      internalID: -2472673960154125572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_2
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 484.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47926bde3c4cee520800000000000000
+      internalID: 2733338369646274932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_3
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 484.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa782194c3f6e6b00800000000000000
+      internalID: 823718086570051503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 323.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e64caac198f6170800000000000000
+      internalID: 8173902604917829215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_5
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 323.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc3deafa3c6457f0800000000000000
+      internalID: -624755447723901776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_6
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 323.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6748ba539ad81bc20800000000000000
+      internalID: 3220510966436037750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_7
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 323.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6fc5251b26e92bb0800000000000000
+      internalID: -4960180441859109014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 162.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be48a209647b4c6b0800000000000000
+      internalID: -5276891349677079317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_9
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 162.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7839295e89c10a830800000000000000
+      internalID: 4080292705409864583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_10
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 162.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c60d326406743c0800000000000000
+      internalID: -4375422658602308533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_11
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 162.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3755025652fb75d20800000000000000
+      internalID: 3267290222011897203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d2d06b399dbdfe0800000000000000
+      internalID: -1163096850307404484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_13
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d6249f3c20808b0800000000000000
+      internalID: -5185891930193367797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_14
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52714ecdc411bbf0800000000000000
+      internalID: -310444025150606755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BillSheet_15
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 1.5
+        width: 146.5
+        height: 161.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f147579dd33fd30800000000000000
+      internalID: 4463979659842035582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
