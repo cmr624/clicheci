@@ -118,10 +118,10 @@ TextureImporter:
       name: gnome_happy_0
       rect:
         serializedVersion: 2
-        x: 79
-        y: 226
-        width: 818
-        height: 778
+        x: 0
+        y: 0
+        width: 1027
+        height: 1034
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,10 +139,10 @@ TextureImporter:
       name: gnome_happy_1
       rect:
         serializedVersion: 2
-        x: 1114
-        y: 174
-        width: 874
-        height: 845
+        x: 1027
+        y: 0
+        width: 1027
+        height: 1034
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,10 +160,10 @@ TextureImporter:
       name: gnome_happy_2
       rect:
         serializedVersion: 2
-        x: 2136
-        y: 67
-        width: 863
-        height: 941
+        x: 2054
+        y: 0
+        width: 1027
+        height: 1034
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,10 +181,10 @@ TextureImporter:
       name: gnome_happy_3
       rect:
         serializedVersion: 2
-        x: 3159
-        y: 67
-        width: 867
-        height: 805
+        x: 3081
+        y: 0
+        width: 1027
+        height: 1034
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: gnome_happy_4
       rect:
         serializedVersion: 2
-        x: 4186
-        y: 82
-        width: 866
-        height: 878
+        x: 4108
+        y: 0
+        width: 1027
+        height: 1034
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +223,10 @@ TextureImporter:
       name: gnome_happy_5
       rect:
         serializedVersion: 2
-        x: 5213
-        y: 67
-        width: 863
-        height: 813
+        x: 5135
+        y: 0
+        width: 1027
+        height: 1034
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,10 +244,10 @@ TextureImporter:
       name: gnome_happy_6
       rect:
         serializedVersion: 2
-        x: 6236
-        y: 66
-        width: 867
-        height: 941
+        x: 6162
+        y: 0
+        width: 1027
+        height: 1034
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,10 +265,10 @@ TextureImporter:
       name: gnome_happy_7
       rect:
         serializedVersion: 2
-        x: 7263
-        y: 67
-        width: 867
-        height: 813
+        x: 7189
+        y: 0
+        width: 1027
+        height: 1034
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
