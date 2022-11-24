@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: 5833d5446690d44d8aa5fbdfe70bc3e4
+guid: 0e42a8ecc4c684e6aa6a9b267e73882d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4759614992124201205
-    second: gnome_happy_0
+      213: 511199280421806607
+    second: Oh_Gnome_0
   - first:
-      213: -6216542267841952114
-    second: gnome_happy_1
+      213: 1279646186155847436
+    second: Oh_Gnome_1
   - first:
-      213: 7710244748584578046
-    second: gnome_happy_2
+      213: -6489331952790332679
+    second: Oh_Gnome_2
   - first:
-      213: -4384668735771956619
-    second: gnome_happy_3
+      213: 2614119410278221982
+    second: Oh_Gnome_3
   - first:
-      213: 8056490900863102736
-    second: gnome_happy_4
+      213: 1188441486827707866
+    second: Oh_Gnome_4
   - first:
-      213: -6563931034509486583
-    second: gnome_happy_5
+      213: -7406707950018507381
+    second: Oh_Gnome_5
   - first:
-      213: -4158293992729168927
-    second: gnome_happy_6
-  - first:
-      213: -4446309476627479342
-    second: gnome_happy_7
+      213: -3245494257248638071
+    second: Oh_Gnome_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gnome_happy_0
+      name: Oh_Gnome_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1027
-        height: 1034
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0730d6d16372fdb0800000000000000
-      internalID: -4759614992124201205
+      spriteID: f022afe7905281700800000000000000
+      internalID: 511199280421806607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_happy_1
+      name: Oh_Gnome_1
       rect:
         serializedVersion: 2
-        x: 1027
+        x: 1024
         y: 0
-        width: 1027
-        height: 1034
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e86441a7eb76ab9a0800000000000000
-      internalID: -6216542267841952114
+      spriteID: c0fa00c2d6732c110800000000000000
+      internalID: 1279646186155847436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_happy_2
+      name: Oh_Gnome_2
       rect:
         serializedVersion: 2
-        x: 2054
+        x: 2048
         y: 0
-        width: 1027
-        height: 1034
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efb64ba8fba400b60800000000000000
-      internalID: 7710244748584578046
+      spriteID: 9fa175c88f241f5a0800000000000000
+      internalID: -6489331952790332679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_happy_3
+      name: Oh_Gnome_3
       rect:
         serializedVersion: 2
-        x: 3081
+        x: 3072
         y: 0
-        width: 1027
-        height: 1034
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +189,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57a2d8a04078623c0800000000000000
-      internalID: -4384668735771956619
+      spriteID: e984612e0c7374420800000000000000
+      internalID: 2614119410278221982
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_happy_4
+      name: Oh_Gnome_4
       rect:
         serializedVersion: 2
-        x: 4108
+        x: 4096
         y: 0
-        width: 1027
-        height: 1034
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +210,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01fac1a0ac76ecf60800000000000000
-      internalID: 8056490900863102736
+      spriteID: addd3b25c313e7010800000000000000
+      internalID: 1188441486827707866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_happy_5
+      name: Oh_Gnome_5
       rect:
         serializedVersion: 2
-        x: 5135
+        x: 5120
         y: 0
-        width: 1027
-        height: 1034
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +231,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90656e5508b38e4a0800000000000000
-      internalID: -6563931034509486583
+      spriteID: b8dc514ac56163990800000000000000
+      internalID: -7406707950018507381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gnome_happy_6
+      name: Oh_Gnome_6
       rect:
         serializedVersion: 2
-        x: 6162
+        x: 6144
         y: 0
-        width: 1027
-        height: 1034
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,29 +252,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e3bcbb25a5ca46c0800000000000000
-      internalID: -4158293992729168927
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: gnome_happy_7
-      rect:
-        serializedVersion: 2
-        x: 7189
-        y: 0
-        width: 1027
-        height: 1034
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d48a2ca6198b42c0800000000000000
-      internalID: -4446309476627479342
+      spriteID: 98bef1c1b20b5f2d0800000000000000
+      internalID: -3245494257248638071
       vertices: []
       indices: 
       edges: []
