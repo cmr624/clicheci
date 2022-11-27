@@ -108,6 +108,8 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
         }
     }
 
+    
+    
     public void CompleteGame()
     {
         StartCoroutine(EndGame(3f));
