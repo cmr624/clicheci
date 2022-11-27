@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 4713940749260429135}
   - component: {fileID: 3737765377797038848}
   m_Layer: 0
-  m_Name: Gnome
+  m_Name: MooningGnome
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

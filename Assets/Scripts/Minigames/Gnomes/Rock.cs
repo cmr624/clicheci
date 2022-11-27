@@ -49,6 +49,7 @@ public class Rock : MonoBehaviour
             Animator snakeAnimator = Snake.GetComponent<Animator>();
             snakeAnimator.Play("redSnakeAnim");
             GnomeMinigameManager.Instance.AddScore(SnakeData.scoreValue);
+            GnomeMinigameManager.Instance.SnakeFeedback.PlayFeedbacks();
         }
         else if (choice == 2)
         {
