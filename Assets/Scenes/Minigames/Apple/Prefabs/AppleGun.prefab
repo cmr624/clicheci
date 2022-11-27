@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1186291391421757260}
   - component: {fileID: 1186291391421757261}
   - component: {fileID: 2166524657897413804}
+  - component: {fileID: 574127836}
   m_Layer: 0
   m_Name: AppleGun
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1186291391421757259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.9, y: -8.58, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 9, y: 9, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,10 +73,10 @@ SpriteRenderer:
   m_SortingLayerID: -1297392479
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300014, guid: 358b5d9f23bc9413e87c9948acc67ee1, type: 3}
+  m_Sprite: {fileID: 7772059508125925323, guid: 3100c6a582c90a44ba86e114fcfedbde, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 1
+  m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 5.72, y: 5.22}
   m_AdaptiveModeThreshold: 0.5
@@ -96,3 +97,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AppleProjectile: {fileID: 1319301440957241876, guid: f52677194eac34d45ba7446da705750b, type: 3}
+  apple_anim: {fileID: 574127836}
+--- !u!95 &574127836
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186291391421757259}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fdee1ff747b32224dbf70de03ed23cb5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
