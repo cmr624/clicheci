@@ -22,7 +22,6 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
 
     public void LoadScene(string name)
     {
-        
         MMSceneLoadingManager.LoadScene(name, "LoadingScreen");
     }
     

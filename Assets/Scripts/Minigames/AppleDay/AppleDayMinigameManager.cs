@@ -127,14 +127,28 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
 
     private IEnumerator IterateSequence()
     {
-        yield return new WaitForSeconds(.5f);
-        
         foreach (var STEP in SequenceData.Sequence)
         {
             yield return new WaitForSeconds(STEP.TimerToSpawn);
+            SpriteRenderer DrSr = Doctor.GetComponent<SpriteRenderer>();
+            DrSr.enabled = true;
             Doctor.transform.position = FindDoor(STEP.Location).position;
             Doctor.GetComponent<Rigidbody2D>().velocity = new Vector2(STEP.Speed, 0f);
-            yield return new WaitForSeconds(3f);
+            
+            Doctor.transform.localScale = (Doctor.transform.localScale * STEP.ScaleChange);
+            
+            if (STEP.Speed < 0)
+            {
+                // we're going left, so we need to not be flipped
+                DrSr.flipX = false;
+            }
+            else
+            {
+                // we're going right, so we need to be flipped
+                DrSr.flipX = true;
+            }
+            yield return new WaitForSeconds(STEP.WalkingTime);
+            DrSr.enabled = false;
         }
         CompleteGame();
     }

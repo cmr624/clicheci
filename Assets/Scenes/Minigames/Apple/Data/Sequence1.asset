@@ -15,13 +15,21 @@ MonoBehaviour:
   Sequence:
   - Location: 4l
     TimerToSpawn: 0
+    ScaleChange: 1
+    WalkingTime: 1.5
     Speed: 9.8
   - Location: 3r
     TimerToSpawn: 4
-    Speed: -14.88
+    ScaleChange: 1.5
+    WalkingTime: 1
+    Speed: -40.5
   - Location: 2l
     TimerToSpawn: 5
-    Speed: 12.2
+    ScaleChange: 1.2
+    WalkingTime: 1.5
+    Speed: 24.98
   - Location: 1r
     TimerToSpawn: 2
-    Speed: -21.58
+    ScaleChange: 1.5
+    WalkingTime: 1
+    Speed: -58.4

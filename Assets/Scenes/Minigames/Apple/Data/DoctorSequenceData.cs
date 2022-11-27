@@ -17,5 +17,9 @@ public class Step
     [SerializeField]
     public float TimerToSpawn;
     [SerializeField]
+    public float ScaleChange;
+    [SerializeField]
+    public float WalkingTime;
+    [SerializeField]
     public float Speed;
 }
