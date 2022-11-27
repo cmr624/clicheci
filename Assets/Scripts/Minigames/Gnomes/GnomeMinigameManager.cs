@@ -63,12 +63,9 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
     IEnumerator TimerComplete()
     {
         yield return new WaitForSeconds(roundTime);
-        
         // ending sequence
         
         // trigger an animation. in 5 seconds, go back home
-        
-        
         yield return new WaitForSeconds(5f);
        _flowManagerInstance.MinigameComplete();
     }
