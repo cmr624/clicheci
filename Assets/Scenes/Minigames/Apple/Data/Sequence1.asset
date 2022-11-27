@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sequence:
   - Location: 4l
-    TimerToSpawn: 1
+    TimerToSpawn: 0
     Speed: 9.8
   - Location: 3r
     TimerToSpawn: 4
