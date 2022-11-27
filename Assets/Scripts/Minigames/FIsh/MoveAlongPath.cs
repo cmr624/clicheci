@@ -8,6 +8,7 @@ public class MoveAlongPath : MonoBehaviour
 
     public LeanTweenPath path;
 
+    [HideInInspector]
     public bool Vulnerable = false;
     // Start is called before the first frame update
     void Start()
