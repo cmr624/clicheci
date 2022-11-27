@@ -6,7 +6,6 @@ using UnityEngine;
 public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
 {
 
-
     protected GameFlowManager _flowManagerInstance;
     
     public GameObject Doctor;
