@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.Feedbacks;
 using UnityEngine;
 
 public class AppleGunShoot : MonoBehaviour
@@ -12,6 +14,14 @@ public class AppleGunShoot : MonoBehaviour
     public float TimeOfApple;
 
     public Transform AppleTo;
+
+    protected MMF_Player _player;
+
+    private void Start()
+    {
+        _player = GetComponent<MMF_Player>();
+    }
+
     // Start is called before the first frame update
     public void Shoot()
     {
@@ -19,6 +29,8 @@ public class AppleGunShoot : MonoBehaviour
         apple_anim.SetBool("Firing", true);
         // then it's set to turn off after .5 seconds
         StartCoroutine(StopAnimation(.5f));
+        
+        _player.PlayFeedbacks();
         
         // create hte apple from the prefab
         GameObject Apple = Instantiate(AppleProjectile, SpawnPoint.position, SpawnPoint.rotation);

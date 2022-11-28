@@ -49,6 +49,8 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
         _1r = GameObject.Find("1r").transform;
 
         StartCoroutine(IterateSequence());
+
+        GameOver = false;
     }
 
     
@@ -120,7 +122,9 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
     
     public void CompleteGame()
     {
-        StartCoroutine(EndGame(3f));
+        // Debug.Log("GAME COMPLETE")
+        GameOver = true;
+        StartCoroutine(EndGame(5f));
     }
 
     private IEnumerator EndGame(float seconds)
@@ -138,8 +142,8 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
     {
         return Vector3.Distance(FindDoor(door1).position, FindDoor(door2).position);
     }
-    
 
+    public bool GameOver = false;
     
     // this goes through our sequence data class and for loops through each step
     private IEnumerator IterateSequence()
@@ -184,8 +188,20 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
             // wait until the alotted walking time
             yield return new WaitForSeconds(STEP.WalkingTime);
             // then disable the doctor to mimic him going behind the door
-            DrSr.enabled = false;
+            if (!GameOver)
+            {
+                DrSr.enabled = false;
+            }
         }
+        // you lose! because you didnt get the guy in time
+        // play da game over screen
+        GameOverAnimation();
         CompleteGame();
+    }
+
+    public GameObject GameOverDoctor;
+    public void GameOverAnimation()
+    {
+       GameOverDoctor.gameObject.SetActive(true); 
     }
 }
