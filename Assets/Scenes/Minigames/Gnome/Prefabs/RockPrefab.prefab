@@ -918,7 +918,7 @@ MonoBehaviour:
     probability: 50
   Snake: {fileID: 299159326240459948}
   SnakeData:
-    scoreValue: -20
+    scoreValue: -15
     probability: 25
   Gnome: {fileID: 1720510709603182907}
   GnomeData:
