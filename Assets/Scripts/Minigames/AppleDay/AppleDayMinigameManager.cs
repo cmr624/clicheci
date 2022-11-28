@@ -188,7 +188,11 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
             // wait until the alotted walking time
             yield return new WaitForSeconds(STEP.WalkingTime);
             // then disable the doctor to mimic him going behind the door
-            if (!GameOver)
+            if (_instance.GameOver)
+            {
+                yield break;
+            }
+            else
             {
                 DrSr.enabled = false;
             }
@@ -202,6 +206,9 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
     public GameObject GameOverDoctor;
     public void GameOverAnimation()
     {
-       GameOverDoctor.gameObject.SetActive(true); 
+        if (!_instance.GameOver)
+        {
+           GameOverDoctor.gameObject.SetActive(true); 
+        }
     }
 }
