@@ -43,7 +43,18 @@ public class Bear : MonoBehaviour
         SwipeAnimation();
         StartCoroutine(SetSwipeBack(SwipeTimeInSeconds));
     }
-    
+
+    public void Ouchy()
+    {
+       _animator.SetBool("isHurt", true);
+       StartCoroutine(SetHurtBack());
+    }
+
+    private IEnumerator SetHurtBack()
+    {
+        yield return new WaitForSeconds(0.65f);
+        _animator.SetBool("isHurt", false);
+    }
      
     private IEnumerator SetSwipeBack(float seconds)
     {
@@ -78,8 +89,10 @@ public class Bear : MonoBehaviour
     {
        IsDodging = true;
        yield return new WaitForSeconds(seconds);
-       LeanTween.moveX(gameObject, _originalLoc.x, .2f);
-       IsDodging = false;
+       LeanTween.moveX(gameObject, _originalLoc.x, .1f).setOnComplete((() =>
+       {
+           IsDodging = false;
+       }));
     }
     
 }

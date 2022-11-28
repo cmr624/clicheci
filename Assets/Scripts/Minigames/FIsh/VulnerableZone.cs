@@ -36,7 +36,11 @@ public class VulnerableZone : MonoBehaviour
         if (other.CompareTag("BigFishy"))
         {
             // eat the bear
-            bAnimator.SetBool("isHurt", true);
+            if (!b.IsDodging)
+            {
+                b.Ouchy();
+                other.gameObject.SetActive(false);
+            }
         }
     }
 
