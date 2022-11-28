@@ -9,7 +9,15 @@ public class AppleCollidesWith : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Doctor"))
         {
+
+            GameObject dr = other.gameObject;
+            dr.GetComponent<Animator>().SetTrigger("Dead");
+            dr.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            
             AppleDayMinigameManager.Instance.CompleteGame();
+            
+            // play particle effect
+            Destroy(gameObject);
         } 
     }
 }
