@@ -82,9 +82,9 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
         //adjust the fill amount on the scoreFill image (amount of "points")
         AdjustScoreFill();
         if (_score < 0)
-            {
-                GameOver();
-            }
+        {
+            GameOver();
+        }
     }
 
     private IEnumerator Lose() {
@@ -152,11 +152,13 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
             {
                 titleScreenGO.SetActive(false);
                 _timer = StartCoroutine(TimerComplete());
+                MusicFeedback.PlayFeedbacks();
             }); 
     
     
     }
 
+    public MMF_Player MusicFeedback;
     //don't put a coroutine in a coroutine, you dumb idiot, freaking... sheesh!!!
     IEnumerator FadeImage(bool fadeAway)
     {
