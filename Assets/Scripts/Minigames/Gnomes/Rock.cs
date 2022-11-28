@@ -92,8 +92,8 @@ public class Rock : MonoBehaviour
     public void Spawn()
     {
        _rockAnimator.SetTrigger("clicked");
-       //RockBreakFeedback.PlayFeedbacks();
-        StartCoroutine(SelectSpawnedItem(.8f));
+       GnomeMinigameManager.Instance.RockBreakFeedback.PlayFeedbacks();
+       StartCoroutine(SelectSpawnedItem(.8f));
        // try that? 
     }
 

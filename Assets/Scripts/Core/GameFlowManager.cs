@@ -41,6 +41,7 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
     public void MinigameComplete()
     {
         Instance.score+=1;
+        MMSoundManager.Instance.StopTrack(MMSoundManager.MMSoundManagerTracks.Music);
         MMSceneLoadingManager.LoadScene(defaultScene, "LoadingScreen");
     }
 }
