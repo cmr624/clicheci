@@ -914,15 +914,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Coin: {fileID: 5582368038550190504}
   CoinData:
-    scoreValue: 50
+    scoreValue: 25
     probability: 50
   Snake: {fileID: 299159326240459948}
   SnakeData:
-    scoreValue: 10
+    scoreValue: -20
     probability: 25
   Gnome: {fileID: 1720510709603182907}
   GnomeData:
-    scoreValue: 10
+    scoreValue: -10
     probability: 25
 --- !u!95 &811502591018348680
 Animator:
