@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,15 +17,21 @@ public class Bear : MonoBehaviour
     public UnityEvent OnSwipe;
     public UnityEvent OnDodge;
 
-    public void Hide()
+
+    protected Animator _animator;
+    private void Start()
     {
-        LeanTween.scaleY(gameObject, 2f, 2f);
+        _animator = GetComponent<Animator>();
+        _originalLoc = transform.position;
     }
 
-    public void Move()
+    public void SwipeAnimation()
     {
-        LeanTween.moveX(gameObject, 20f, 2f);
+        //LeanTween.scaleY(gameObject, 2f, 2f);
+        _animator.SetBool("isSwiping", true);
     }
+
+   
     
     public void Swipe()
     {
@@ -33,8 +40,23 @@ public class Bear : MonoBehaviour
             return;
         }
         OnSwipe.Invoke();
+        SwipeAnimation();
         StartCoroutine(SetSwipeBack(SwipeTimeInSeconds));
     }
+    
+     
+    private IEnumerator SetSwipeBack(float seconds)
+    {
+       IsSwiping = true;
+       yield return new WaitForSeconds(seconds);
+       
+       _animator.SetBool("isSwiping", false);
+       IsSwiping = false;
+    }
+    
+    
+    
+    
     
     public void Dodge()
     { 
@@ -43,20 +65,20 @@ public class Bear : MonoBehaviour
             return;
         }
         OnDodge.Invoke();
+        Move();
         StartCoroutine(SetDodgeBack(DodgeTimeInSeconds));
     }
-   
-    private IEnumerator SetSwipeBack(float seconds)
+
+    protected Vector3 _originalLoc;
+    public void Move()
     {
-       IsSwiping = true;
-       yield return new WaitForSeconds(seconds);
-       IsSwiping = false;
+        LeanTween.moveX(gameObject, 10f, .2f);
     }
-    
     private IEnumerator SetDodgeBack(float seconds)
     {
        IsDodging = true;
        yield return new WaitForSeconds(seconds);
+       LeanTween.moveX(gameObject, _originalLoc.x, .2f);
        IsDodging = false;
     }
     

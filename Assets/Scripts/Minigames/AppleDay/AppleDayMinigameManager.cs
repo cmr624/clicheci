@@ -171,13 +171,13 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
             // if the location we're starting from is on the LEFT side, we need to go RIGHT.
             if (STEP.LocationFrom.Contains("l"))
             {
-                // we're going left, so we need to not be flipped
+                // we're going right, so we need to be flipped
                 DrSr.flipX = true;
             }
             else
             {
                 r *= -1;
-                // we're going right, so we need to be flipped
+                // we're going left, so we need to not be flipped
                 DrSr.flipX = false;
             }
             // set the velocity of the doctor
