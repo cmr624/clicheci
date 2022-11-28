@@ -97,7 +97,12 @@ public class Rock : MonoBehaviour
        // try that? 
     }
 
-   
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
+    }
+
+
     // ty < 3 https://forum.unity.com/threads/random-numbers-with-a-weighted-chance.442190/
     
     // [.6, .5, .3, .2]
