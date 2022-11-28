@@ -13,9 +13,12 @@ public class DoctorSequenceData : ScriptableObject
 public class Step
 {
     [SerializeField]
-    public string Location;
+    public string LocationFrom;
+    [SerializeField] public string LocationTo;
     [SerializeField]
     public float TimerToSpawn;
     [SerializeField]
-    public float Speed;
+    public float ScaleChange;
+    [SerializeField]
+    public float WalkingTime;
 }

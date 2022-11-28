@@ -16,17 +16,32 @@ public class Rock : MonoBehaviour
     private SpriteRenderer _sprite;
     private Animator _rockAnimator;
 
+    private GnomeMinigameManager _gnomeGameManager;
+
+    // [Header("SCORING")]
+    // public float addToScore;
+
+    [Header("Coins")]
     public GameObject Coin;
     public SpawnedObjectData CoinData;
+//    float coinPoints = 20f;
+
+    [Header("Snakes")]
     public GameObject Snake;
     public SpawnedObjectData SnakeData;
+    // float snakePoints = -20f;
+
+    [Header("Gnomes")]
     public GameObject Gnome;
     public SpawnedObjectData GnomeData;
+    // float gnomePoints = -10f;
 
     private void Start()
     {
         _sprite = GetComponent<SpriteRenderer>();
         _rockAnimator = GetComponent<Animator>();
+        _gnomeGameManager = GetComponent<GnomeMinigameManager>();
+
     }
 
     IEnumerator SelectSpawnedItem(float numberOfSeconds){
@@ -42,6 +57,9 @@ public class Rock : MonoBehaviour
             coinAnimator.Play("coinSpin");
             GnomeMinigameManager.Instance.AddScore(CoinData.scoreValue);
             GnomeMinigameManager.Instance.CoinFeedback.PlayFeedbacks();
+
+            Debug.Log("Coin earned " + CoinData.scoreValue + " points");
+
         }
         else if (choice == 1)
         {
@@ -49,6 +67,9 @@ public class Rock : MonoBehaviour
             Animator snakeAnimator = Snake.GetComponent<Animator>();
             snakeAnimator.Play("redSnakeAnim");
             GnomeMinigameManager.Instance.AddScore(SnakeData.scoreValue);
+            Debug.Log("Snake earned " + SnakeData.scoreValue + " points");
+
+            GnomeMinigameManager.Instance.SnakeFeedback.PlayFeedbacks();
         }
         else if (choice == 2)
         {
@@ -56,7 +77,9 @@ public class Rock : MonoBehaviour
             Animator gnomeAnimator = Gnome.GetComponent<Animator>();
             gnomeAnimator.Play("gnomeMoon");
             GnomeMinigameManager.Instance.AddScore(GnomeData.scoreValue);
+            Debug.Log("Gnome earned " + GnomeData.scoreValue + " points");
             GnomeMinigameManager.Instance.GnomeFeedback.PlayFeedbacks();
+           
         }
         _sprite.enabled = false;// SetActive(false);
         // set the lean touch manager to off too
@@ -69,12 +92,17 @@ public class Rock : MonoBehaviour
     public void Spawn()
     {
        _rockAnimator.SetTrigger("clicked");
-       //RockBreakFeedback.PlayFeedbacks();
-        StartCoroutine(SelectSpawnedItem(.8f));
+       GnomeMinigameManager.Instance.RockBreakFeedback.PlayFeedbacks();
+       StartCoroutine(SelectSpawnedItem(.8f));
        // try that? 
     }
 
-   
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
+    }
+
+
     // ty < 3 https://forum.unity.com/threads/random-numbers-with-a-weighted-chance.442190/
     
     // [.6, .5, .3, .2]

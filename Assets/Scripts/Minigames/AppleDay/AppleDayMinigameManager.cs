@@ -6,7 +6,6 @@ using UnityEngine;
 public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
 {
 
-
     protected GameFlowManager _flowManagerInstance;
     
     public GameObject Doctor;
@@ -35,6 +34,8 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
     void Start()
     {
         _flowManagerInstance = GameFlowManager.Instance;
+        
+        // decided to hard code this 
         // find left doors
         _4l = GameObject.Find("4l").transform;
         _3l = GameObject.Find("3l").transform;
@@ -48,8 +49,12 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
         _1r = GameObject.Find("1r").transform;
 
         StartCoroutine(IterateSequence());
+
+        GameOver = false;
     }
 
+    
+    // a helper function to translate the string of the door to the gameobject. it's not great
     private Transform FindDoor(string str)
     {
         if (str == ("4l"))
@@ -95,11 +100,16 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
         AppleShoot();
     }
 
+    // the manager function that shoots the apple, it's acting as the gun here.
     public void AppleShoot()
     {
+        // 
         if (Input.GetButtonDown("Jump") && !OutOfAmmo)
         {
+            // we have to call the actual shoot function on the component itself. This is the prefab.
             AppleGun.GetComponent<AppleGunShoot>().Shoot();
+            
+            // do ammo logic
             MaxAmmo--;
             if (MaxAmmo <= 0)
             {
@@ -108,9 +118,13 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
         }
     }
 
+    
+    
     public void CompleteGame()
     {
-        StartCoroutine(EndGame(3f));
+        // Debug.Log("GAME COMPLETE")
+        GameOver = true;
+        StartCoroutine(EndGame(5f));
     }
 
     private IEnumerator EndGame(float seconds)
@@ -124,17 +138,77 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
  
     }
 
+    public float GetDistanceBetweenTwoDoors(string door1, string door2)
+    {
+        return Vector3.Distance(FindDoor(door1).position, FindDoor(door2).position);
+    }
+
+    public bool GameOver = false;
+    
+    // this goes through our sequence data class and for loops through each step
     private IEnumerator IterateSequence()
     {
-        yield return new WaitForSeconds(.5f);
-        
+        // for every step in the current sequence
         foreach (var STEP in SequenceData.Sequence)
         {
+            // wait to spawn the alotted time
             yield return new WaitForSeconds(STEP.TimerToSpawn);
-            Doctor.transform.position = FindDoor(STEP.Location).position;
-            Doctor.GetComponent<Rigidbody2D>().velocity = new Vector2(STEP.Speed, 0f);
-            yield return new WaitForSeconds(3f);
+            // cache the sprite renderer for hte doctor since we need to set it up;
+            SpriteRenderer DrSr = Doctor.GetComponent<SpriteRenderer>();
+            
+            // make sure it's enabled (it gets disabled after it reaches a destination door)
+            DrSr.enabled = true;
+            // set the spawn position, from a string in the StepData called LocationFrom
+            Doctor.transform.position = FindDoor(STEP.LocationFrom).position;
+            
+            // determine how much time to take from A to B
+            float d = GetDistanceBetweenTwoDoors(STEP.LocationFrom, STEP.LocationTo);
+            // distance = rate * time
+            // rate = distance / time;
+
+            float r = d / STEP.WalkingTime;
+            
+            // if the location we're starting from is on the LEFT side, we need to go RIGHT.
+            if (STEP.LocationFrom.Contains("l"))
+            {
+                // we're going left, so we need to not be flipped
+                DrSr.flipX = true;
+            }
+            else
+            {
+                r *= -1;
+                // we're going right, so we need to be flipped
+                DrSr.flipX = false;
+            }
+            // set the velocity of the doctor
+            Doctor.GetComponent<Rigidbody2D>().velocity = new Vector2(r, 0f);
+            // scale up the doctor if needed
+            Doctor.transform.localScale = (Doctor.transform.localScale * STEP.ScaleChange);
+            
+            // wait until the alotted walking time
+            yield return new WaitForSeconds(STEP.WalkingTime);
+            // then disable the doctor to mimic him going behind the door
+            if (_instance.GameOver)
+            {
+                yield break;
+            }
+            else
+            {
+                DrSr.enabled = false;
+            }
         }
+        // you lose! because you didnt get the guy in time
+        // play da game over screen
+        GameOverAnimation();
         CompleteGame();
+    }
+
+    public GameObject GameOverDoctor;
+    public void GameOverAnimation()
+    {
+        if (!_instance.GameOver)
+        {
+           GameOverDoctor.gameObject.SetActive(true); 
+        }
     }
 }

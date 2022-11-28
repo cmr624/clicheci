@@ -5,6 +5,6 @@ using UnityEngine;
 [Serializable]
 public class SpawnedObjectData 
 {
-    public int scoreValue;
+    public float scoreValue;
     public float probability;
 }

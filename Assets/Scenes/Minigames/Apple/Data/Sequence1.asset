@@ -13,15 +13,27 @@ MonoBehaviour:
   m_Name: Sequence1
   m_EditorClassIdentifier: 
   Sequence:
-  - Location: 4l
-    TimerToSpawn: 1
+  - LocationFrom: 4l
+    LocationTo: 4r
+    TimerToSpawn: 0
+    ScaleChange: 1
+    WalkingTime: 1.5
     Speed: 9.8
-  - Location: 3r
+  - LocationFrom: 3r
+    LocationTo: 3l
     TimerToSpawn: 4
-    Speed: -14.88
-  - Location: 2l
+    ScaleChange: 1.5
+    WalkingTime: 1
+    Speed: -40.5
+  - LocationFrom: 2l
+    LocationTo: 2r
     TimerToSpawn: 5
-    Speed: 12.2
-  - Location: 1r
+    ScaleChange: 1.2
+    WalkingTime: 1.5
+    Speed: 24.98
+  - LocationFrom: 1r
+    LocationTo: 1l
     TimerToSpawn: 2
-    Speed: -21.58
+    ScaleChange: 1.5
+    WalkingTime: 1
+    Speed: -58.4
