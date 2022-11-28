@@ -26,7 +26,8 @@ public class VulnerableZone : MonoBehaviour
 
             if (b.IsSwiping)
             {
-                Destroy(other.gameObject);
+                //Destroy(other.gameObject);
+                other.gameObject.SetActive(false);
                 // TODO set some particle effect here
                 //bAnimator.SetBool("isSwiping", true);
             }

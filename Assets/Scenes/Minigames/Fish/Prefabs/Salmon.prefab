@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea05ff48b7f5f4177bfa6056d970e3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTravelArcInSeconds: 3
+  timeToTravelArcInSeconds: 2
   Vulnerable: 0
 --- !u!61 &4373100037338925120
 BoxCollider2D:
@@ -144,4 +144,4 @@ MonoBehaviour:
   ExecuteOnDisable:
     m_PersistentCalls:
       m_Calls: []
-  LifeTime: 8
+  LifeTime: 3
