@@ -11,7 +11,7 @@ public class MoveAlongPath : MonoBehaviour
     [HideInInspector]
     public bool Vulnerable = false;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         MoveOnPath();
     }

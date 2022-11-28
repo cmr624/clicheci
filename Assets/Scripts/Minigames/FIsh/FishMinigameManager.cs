@@ -17,11 +17,12 @@ public class FishMinigameManager :MMSingleton<FishMinigameManager>
     protected void Start()
     {
         _flowManagerInstance = GameFlowManager.Instance;
-        _pooler = GetComponent<MMMultipleObjectPooler>();
+        _pooler = gameObject.GetComponent<MMMultipleObjectPooler>();
+        Spawner();
     }
 
 
-    public float timeBetweenSpawns;
+    public float timeBetweenSpawns =0.5f;
     protected void Spawner()
     {
         StartCoroutine(Spawning());
@@ -31,12 +32,13 @@ public class FishMinigameManager :MMSingleton<FishMinigameManager>
     
     private IEnumerator Spawning()
     {
-       yield return new WaitForSeconds(timeBetweenSpawns);
-       _pooler.GetPooledGameObject()
-           .SetActive(true);
-       yield return new WaitForSeconds(timeBetweenSpawns);
-       _pooler.GetPooledGameObject().SetActive(true);
-
+        while (!GameOver)
+        {
+           yield return new WaitForSeconds(timeBetweenSpawns);
+           GameObject nextSpawnedGameObject = _pooler.GetPooledGameObject();
+           nextSpawnedGameObject.gameObject.SetActive(true);
+           nextSpawnedGameObject.gameObject.GetComponent<MMPoolableObject>().TriggerOnSpawnComplete();     
+        }
     }
     // create a spawner
     // have 3 pools of objects

@@ -144,4 +144,4 @@ MonoBehaviour:
   ExecuteOnDisable:
     m_PersistentCalls:
       m_Calls: []
-  LifeTime: 0
+  LifeTime: 8
