@@ -141,19 +141,23 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
     private IEnumerator DisplayTitleScreen() {
 
         // REFACTOR THIS
-        //don't put a coroutine in a coroutine, you dumb idiot, freaking... sheesh!!!
         //
 
         titleScreenGO.SetActive(true);
-        StartCoroutine(FadeImage(true));
-        yield return new WaitForSeconds(6f);
+        //StartCoroutine(FadeImage(true));
+        yield return new WaitForSeconds(3f);
 
-        StartCoroutine(FadeImage(false));
-        titleScreenGO.SetActive(false);
+        LeanTween.alpha(titleScreenIMG.rectTransform, 0f, 1.5f)
+            .setOnComplete(() =>
+            {
+                titleScreenGO.SetActive(false);
+                _timer = StartCoroutine(TimerComplete());
+            }); 
     
     
     }
 
+    //don't put a coroutine in a coroutine, you dumb idiot, freaking... sheesh!!!
     IEnumerator FadeImage(bool fadeAway)
     {
         // fade from opaque to transparent
@@ -166,7 +170,6 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
                 titleScreenIMG.color = new Color(1, 1, 1, i);
                 yield return null;
             }
-            _timer = StartCoroutine(TimerComplete());
         }
         // fade from transparent to opaque
         else
