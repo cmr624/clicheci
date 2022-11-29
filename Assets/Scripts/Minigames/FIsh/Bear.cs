@@ -17,6 +17,7 @@ public class Bear : MonoBehaviour
     public UnityEvent OnSwipe;
     public UnityEvent OnDodge;
 
+    public UnityEvent OnHurt;
 
     protected Animator _animator;
     private void Start()
@@ -46,14 +47,23 @@ public class Bear : MonoBehaviour
 
     public void Ouchy()
     {
+        
        _animator.SetBool("isHurt", true);
+       OnHurt.Invoke();
        StartCoroutine(SetHurtBack());
     }
 
+    public AnimationClip HurtAnimationClip;
     private IEnumerator SetHurtBack()
     {
-        yield return new WaitForSeconds(0.65f);
+        yield return new WaitForSeconds(HurtAnimationClip.length);
         _animator.SetBool("isHurt", false);
+        FishMinigameManager.Instance.Lives--;
+        if (FishMinigameManager.Instance.Lives == 0)
+        {
+           // game over buddy
+           FishMinigameManager.Instance.GameOverSequence();
+        }
     }
      
     private IEnumerator SetSwipeBack(float seconds)
@@ -64,10 +74,6 @@ public class Bear : MonoBehaviour
        _animator.SetBool("isSwiping", false);
        IsSwiping = false;
     }
-    
-    
-    
-    
     
     public void Dodge()
     { 
@@ -83,16 +89,17 @@ public class Bear : MonoBehaviour
     protected Vector3 _originalLoc;
     public void Move()
     {
-        LeanTween.moveX(gameObject, 10f, .2f);
+        LeanTween.moveX(gameObject, 5f, .2f);
     }
     private IEnumerator SetDodgeBack(float seconds)
     {
        IsDodging = true;
        yield return new WaitForSeconds(seconds);
-       LeanTween.moveX(gameObject, _originalLoc.x, .1f).setOnComplete((() =>
-       {
-           IsDodging = false;
-       }));
+       LeanTween.moveX(gameObject, _originalLoc.x, .4f)
+           .setOnComplete((() =>
+           {
+               IsDodging = false;
+           }));
     }
     
 }
