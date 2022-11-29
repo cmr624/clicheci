@@ -14,11 +14,28 @@ public class FishMinigameManager :MMSingleton<FishMinigameManager>
     public LeanTweenPath JumpArc;
 
     protected MMMultipleObjectPooler _pooler;
+
+    public int Lives;
+
+    public float timerInSeconds;
     protected void Start()
     {
         _flowManagerInstance = GameFlowManager.Instance;
         _pooler = gameObject.GetComponent<MMMultipleObjectPooler>();
         Spawner();
+        StartCoroutine(StartTimer());
+    }
+
+    protected IEnumerator StartTimer()
+    {
+        yield return new WaitForSeconds(timerInSeconds);
+        GameOver = true;
+        GameOverSequence();
+    }
+
+    public void GameOverSequence()
+    {
+       _flowManagerInstance.MinigameComplete(); 
     }
 
 
@@ -28,12 +45,14 @@ public class FishMinigameManager :MMSingleton<FishMinigameManager>
         StartCoroutine(Spawning());
     }
 
+    [HideInInspector]
     public bool GameOver = false;
     
     private IEnumerator Spawning()
     {
         while (!GameOver)
         {
+           // TODO randomize this!!!
            yield return new WaitForSeconds(timeBetweenSpawns);
            GameObject nextSpawnedGameObject = _pooler.GetPooledGameObject();
            nextSpawnedGameObject.gameObject.SetActive(true);

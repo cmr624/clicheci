@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class VulnerableZone : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class VulnerableZone : MonoBehaviour
     protected Animator bAnimator;
     public bool Vulnerable;
 
+    public UnityEvent OnFishEaten; 
+    
     private void Start()
     {
         b = FishMinigameManager.Instance.Bear;
@@ -27,6 +30,7 @@ public class VulnerableZone : MonoBehaviour
             if (b.IsSwiping)
             {
                 //Destroy(other.gameObject);
+                OnFishEaten.Invoke();
                 other.gameObject.SetActive(false);
                 // TODO set some particle effect here
                 //bAnimator.SetBool("isSwiping", true);
@@ -36,9 +40,14 @@ public class VulnerableZone : MonoBehaviour
         if (other.CompareTag("BigFishy"))
         {
             // eat the bear
-            if (!b.IsDodging)
+            if (!b.IsDodging && !b.IsSwiping)
             {
+                // bear gets eaten
                 b.Ouchy();
+                other.gameObject.SetActive(false);
+            }else if (b.IsSwiping)
+            {
+                // swatted away
                 other.gameObject.SetActive(false);
             }
         }
