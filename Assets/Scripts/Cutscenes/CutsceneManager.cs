@@ -126,7 +126,10 @@ public class CutsceneManager : MonoBehaviour
             break;
 
         case 6:
-            //load new scene
+            //load TV Head 
+           // InbetweensManager.TVHeadAnimation();
+
+            //load next scene
             SceneManager.LoadScene("GnomeMinigameScene");
             break;
 

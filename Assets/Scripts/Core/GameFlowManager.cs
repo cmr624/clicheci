@@ -15,6 +15,13 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
     
     public string[] minigames;
     public int currentMinigameIndexOrdered = 0;
+
+    //win/lose
+    //needs to be null, but can't be??
+    public bool WonLastGame;
+
+
+
     private void Start()
     {
         Debug.Log(Instance.score);
@@ -27,6 +34,8 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
     
     public void LoadNextScene()
     {
+        
+        
         MMSceneLoadingManager.LoadScene(minigames[currentMinigameIndexOrdered], "LoadingScreen");
         // remove if statement laterr
         /*
@@ -40,6 +49,7 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
     // on complete, load back the default scene.
     public void MinigameComplete()
     {
+        WonLastGame = true;
         Instance.score+=1;
         MMSoundManager.Instance.StopTrack(MMSoundManager.MMSoundManagerTracks.Music);
         MMSceneLoadingManager.LoadScene(defaultScene, "LoadingScreen");
