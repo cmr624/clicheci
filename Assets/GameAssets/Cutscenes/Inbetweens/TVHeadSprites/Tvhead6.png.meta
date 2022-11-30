@@ -1,0 +1,1776 @@
+fileFormatVersion: 2
+guid: f539e25b3e0e54d078c9f7d617061699
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8606503705300660609
+    second: Tvhead6_0
+  - first:
+      213: -4072166182739784104
+    second: Tvhead6_1
+  - first:
+      213: -8135790167473287518
+    second: Tvhead6_2
+  - first:
+      213: 5533850487183123831
+    second: Tvhead6_3
+  - first:
+      213: 8599431133527938933
+    second: Tvhead6_4
+  - first:
+      213: -2168578568819493447
+    second: Tvhead6_5
+  - first:
+      213: 375196866319807037
+    second: Tvhead6_6
+  - first:
+      213: -1829201973024968832
+    second: Tvhead6_7
+  - first:
+      213: 2633049190660532
+    second: Tvhead6_8
+  - first:
+      213: 2523441467458263127
+    second: Tvhead6_9
+  - first:
+      213: -106225446068885539
+    second: Tvhead6_10
+  - first:
+      213: -6357970141548238684
+    second: Tvhead6_11
+  - first:
+      213: 762173110669927209
+    second: Tvhead6_12
+  - first:
+      213: 1323944163909381328
+    second: Tvhead6_13
+  - first:
+      213: -1690528632975801822
+    second: Tvhead6_14
+  - first:
+      213: -5680080236535014228
+    second: Tvhead6_15
+  - first:
+      213: -34335336494957453
+    second: Tvhead6_16
+  - first:
+      213: 7347403651797302634
+    second: Tvhead6_17
+  - first:
+      213: -5261282244505305375
+    second: Tvhead6_18
+  - first:
+      213: -1794856855263092046
+    second: Tvhead6_19
+  - first:
+      213: 6764407804615989546
+    second: Tvhead6_20
+  - first:
+      213: 4564901400239720578
+    second: Tvhead6_21
+  - first:
+      213: 3052146002431830059
+    second: Tvhead6_22
+  - first:
+      213: 4469492610706666085
+    second: Tvhead6_23
+  - first:
+      213: -1786934212457691027
+    second: Tvhead6_24
+  - first:
+      213: -8203442836694988081
+    second: Tvhead6_25
+  - first:
+      213: -6511316761491642859
+    second: Tvhead6_26
+  - first:
+      213: -2964542605903867876
+    second: Tvhead6_27
+  - first:
+      213: -1486050351444315512
+    second: Tvhead6_28
+  - first:
+      213: -5799186500965473934
+    second: Tvhead6_29
+  - first:
+      213: -7280505328264048794
+    second: Tvhead6_30
+  - first:
+      213: 6199328031308795204
+    second: Tvhead6_31
+  - first:
+      213: 6024329763854287035
+    second: Tvhead6_32
+  - first:
+      213: 2546093244220747638
+    second: Tvhead6_33
+  - first:
+      213: -5982844362329860059
+    second: Tvhead6_34
+  - first:
+      213: 5734637576941164386
+    second: Tvhead6_35
+  - first:
+      213: -5827781212439358273
+    second: Tvhead6_36
+  - first:
+      213: 4998537044204522384
+    second: Tvhead6_37
+  - first:
+      213: -3414234159749017903
+    second: Tvhead6_38
+  - first:
+      213: 8631021023370536180
+    second: Tvhead6_39
+  - first:
+      213: -4165520438150333190
+    second: Tvhead6_40
+  - first:
+      213: 3843854749781246212
+    second: Tvhead6_41
+  - first:
+      213: 7503102437120383350
+    second: Tvhead6_42
+  - first:
+      213: 8509393803420906164
+    second: Tvhead6_43
+  - first:
+      213: 2037122575951091280
+    second: Tvhead6_44
+  - first:
+      213: 6893734591459607041
+    second: Tvhead6_45
+  - first:
+      213: -6681894724404836408
+    second: Tvhead6_46
+  - first:
+      213: 8226753910528782489
+    second: Tvhead6_47
+  - first:
+      213: -6594856351677860971
+    second: Tvhead6_48
+  - first:
+      213: -6517242528850629975
+    second: Tvhead6_49
+  - first:
+      213: 8229666882067340373
+    second: Tvhead6_50
+  - first:
+      213: 3999191111335493188
+    second: Tvhead6_51
+  - first:
+      213: -1763728863653290289
+    second: Tvhead6_52
+  - first:
+      213: 7866691882324130058
+    second: Tvhead6_53
+  - first:
+      213: 4318527325293834818
+    second: Tvhead6_54
+  - first:
+      213: -700524837991091558
+    second: Tvhead6_55
+  - first:
+      213: 4779176789789358856
+    second: Tvhead6_56
+  - first:
+      213: -2200706524016341290
+    second: Tvhead6_57
+  - first:
+      213: -2328675307166256439
+    second: Tvhead6_58
+  - first:
+      213: -2128417107492385364
+    second: Tvhead6_59
+  - first:
+      213: 6316999146746128253
+    second: Tvhead6_60
+  - first:
+      213: -1473433940142614234
+    second: Tvhead6_61
+  - first:
+      213: -1990787268085440712
+    second: Tvhead6_62
+  - first:
+      213: -1745735317694112791
+    second: Tvhead6_63
+  - first:
+      213: -3375914188382728607
+    second: Tvhead6_64
+  - first:
+      213: 8830798621380411462
+    second: Tvhead6_65
+  - first:
+      213: -361219751574955690
+    second: Tvhead6_66
+  - first:
+      213: 2321047653138684912
+    second: Tvhead6_67
+  - first:
+      213: -951911241651479555
+    second: Tvhead6_68
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Tvhead6_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1218
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18177805581707770800000000000000
+      internalID: 8606503705300660609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_1
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1218
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ecf6b9e62cc77c0800000000000000
+      internalID: -4072166182739784104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_2
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1218
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae83aca2fdd71f80800000000000000
+      internalID: -8135790167473287518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_3
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1218
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7752ca0d2bf2ccc40800000000000000
+      internalID: 5533850487183123831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_4
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1218
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5771e50ed01575770800000000000000
+      internalID: 8599431133527938933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_5
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 1218
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b53df10849a7e1e0800000000000000
+      internalID: -2168578568819493447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_6
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1218
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32f4d1ef87f43500800000000000000
+      internalID: 375196866319807037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_7
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 1218
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f276f3f7e5d96e0800000000000000
+      internalID: -1829201973024968832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_8
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 1218
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b97fa98eba590000800000000000000
+      internalID: 2633049190660532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1044
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758175715a0150320800000000000000
+      internalID: 2523441467458263127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_10
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1044
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7e4f4058c968ef0800000000000000
+      internalID: -106225446068885539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_11
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1044
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a82a7c97d3f3c7a0800000000000000
+      internalID: -6357970141548238684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_12
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1044
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923e5dee768c39a00800000000000000
+      internalID: 762173110669927209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_13
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1044
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc2548d3389f5210800000000000000
+      internalID: 1323944163909381328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_14
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 1044
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222c9d44a290a88e0800000000000000
+      internalID: -1690528632975801822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_15
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 1044
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac1d958e1d4c21b0800000000000000
+      internalID: -5680080236535014228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_16
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 1044
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c79f08134068ff0800000000000000
+      internalID: -34335336494957453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_17
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 1044
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d39ce61b837f560800000000000000
+      internalID: 7347403651797302634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 870
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eef0319cab2cf6b0800000000000000
+      internalID: -5261282244505305375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_19
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 870
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b26e5f13336717e0800000000000000
+      internalID: -1794856855263092046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_20
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 870
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2914061f0100ed50800000000000000
+      internalID: 6764407804615989546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_21
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 870
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288c8fb33a9c95f30800000000000000
+      internalID: 4564901400239720578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_22
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 870
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b28e3954e966b5a20800000000000000
+      internalID: 3052146002431830059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_23
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 870
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562776b59d3d60e30800000000000000
+      internalID: 4469492610706666085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_24
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 870
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6887752dc88337e0800000000000000
+      internalID: -1786934212457691027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_25
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 870
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca82972434872e80800000000000000
+      internalID: -8203442836694988081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_26
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 870
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5166e3367e723a5a0800000000000000
+      internalID: -6511316761491642859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 696
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10d69de434dbd6d0800000000000000
+      internalID: -2964542605903867876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_28
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 696
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88231db241d706be0800000000000000
+      internalID: -1486050351444315512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_29
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 696
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27166bf4a96258fa0800000000000000
+      internalID: -5799186500965473934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_30
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 696
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f8b7b4af276fa90800000000000000
+      internalID: -7280505328264048794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_31
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 696
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d4840cfff680650800000000000000
+      internalID: 6199328031308795204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_32
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 696
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb009508008ba9350800000000000000
+      internalID: 6024329763854287035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_33
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 696
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67faccad05a855320800000000000000
+      internalID: 2546093244220747638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_34
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 696
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52851ec30caa8fca0800000000000000
+      internalID: -5982844362329860059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_35
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 696
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2675f292e76859f40800000000000000
+      internalID: 5734637576941164386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 522
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb45bdb3ddf8f1fa0800000000000000
+      internalID: -5827781212439358273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_37
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 522
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b017455fe5e5540800000000000000
+      internalID: 4998537044204522384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_38
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 522
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dec7200f143e90d0800000000000000
+      internalID: -3414234159749017903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_39
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 522
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4ede244eb87c770800000000000000
+      internalID: 8631021023370536180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_40
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 522
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc7b6b3b391136c0800000000000000
+      internalID: -4165520438150333190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_41
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 522
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 401c8e0878d185530800000000000000
+      internalID: 3843854749781246212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_42
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 522
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6799de5d9ef502860800000000000000
+      internalID: 7503102437120383350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_43
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 522
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b230da5490771670800000000000000
+      internalID: 8509393803420906164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_44
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 522
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0565e7f8030554c10800000000000000
+      internalID: 2037122575951091280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 348
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102c5cb16177baf50800000000000000
+      internalID: 6893734591459607041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_46
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 348
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c70b4d76242543a0800000000000000
+      internalID: -6681894724404836408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_47
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 348
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990bf9b281d4b2270800000000000000
+      internalID: 8226753910528782489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_48
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 348
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5933385d61d5a74a0800000000000000
+      internalID: -6594856351677860971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_49
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 348
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa2ac8237a1e85a0800000000000000
+      internalID: -6517242528850629975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_50
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 348
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c9b653d66a53270800000000000000
+      internalID: 8229666882067340373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_51
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 348
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e3d0c802bff7730800000000000000
+      internalID: 3999191111335493188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_52
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 348
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce97d171f9f587e0800000000000000
+      internalID: -1763728863653290289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_53
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 348
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09f063669a1c2d60800000000000000
+      internalID: 7866691882324130058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 174
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 242f4f8c8bd7eeb30800000000000000
+      internalID: 4318527325293834818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_55
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 174
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92f3331f5c3746f0800000000000000
+      internalID: -700524837991091558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_56
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 174
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80bbf2a18fb035240800000000000000
+      internalID: 4779176789789358856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_57
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 174
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de0f1583158571e0800000000000000
+      internalID: -2200706524016341290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_58
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 174
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2b12f5522eeafd0800000000000000
+      internalID: -2328675307166256439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_59
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 174
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad4d06eae75672e0800000000000000
+      internalID: -2128417107492385364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_60
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 174
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77af3c414d7aa750800000000000000
+      internalID: 6316999146746128253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_61
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 174
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6299bc553af4d8be0800000000000000
+      internalID: -1473433940142614234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_62
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 174
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f956ef68d4f54e0800000000000000
+      internalID: -1990787268085440712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb1df45af6e5c7e0800000000000000
+      internalID: -1745735317694112791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_64
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 0
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16e0f399ee75621d0800000000000000
+      internalID: -3375914188382728607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_65
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 0
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 640836efe8c4d8a70800000000000000
+      internalID: 8830798621380411462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_66
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 0
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659158dbc80bcfaf0800000000000000
+      internalID: -361219751574955690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_67
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 0
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fbd5180b84063020800000000000000
+      internalID: 2321047653138684912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tvhead6_68
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 0
+        width: 94
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb99a7e4c12ac2f0800000000000000
+      internalID: -951911241651479555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
