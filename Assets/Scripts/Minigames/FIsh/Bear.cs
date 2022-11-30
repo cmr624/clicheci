@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,15 +17,22 @@ public class Bear : MonoBehaviour
     public UnityEvent OnSwipe;
     public UnityEvent OnDodge;
 
-    public void Hide()
+    public UnityEvent OnHurt;
+
+    protected Animator _animator;
+    private void Start()
     {
-        LeanTween.scaleY(gameObject, 2f, 2f);
+        _animator = GetComponent<Animator>();
+        _originalLoc = transform.position;
     }
 
-    public void Move()
+    public void SwipeAnimation()
     {
-        LeanTween.moveX(gameObject, 20f, 2f);
+        //LeanTween.scaleY(gameObject, 2f, 2f);
+        _animator.SetBool("isSwiping", true);
     }
+
+   
     
     public void Swipe()
     {
@@ -33,7 +41,38 @@ public class Bear : MonoBehaviour
             return;
         }
         OnSwipe.Invoke();
+        SwipeAnimation();
         StartCoroutine(SetSwipeBack(SwipeTimeInSeconds));
+    }
+
+    public void Ouchy()
+    {
+        
+       _animator.SetBool("isHurt", true);
+       OnHurt.Invoke();
+       StartCoroutine(SetHurtBack());
+    }
+
+    public AnimationClip HurtAnimationClip;
+    private IEnumerator SetHurtBack()
+    {
+        yield return new WaitForSeconds(HurtAnimationClip.length);
+        _animator.SetBool("isHurt", false);
+        FishMinigameManager.Instance.Lives--;
+        if (FishMinigameManager.Instance.Lives == 0)
+        {
+           // game over buddy
+           FishMinigameManager.Instance.GameOverSequence();
+        }
+    }
+     
+    private IEnumerator SetSwipeBack(float seconds)
+    {
+       IsSwiping = true;
+       yield return new WaitForSeconds(seconds);
+       
+       _animator.SetBool("isSwiping", false);
+       IsSwiping = false;
     }
     
     public void Dodge()
@@ -43,21 +82,24 @@ public class Bear : MonoBehaviour
             return;
         }
         OnDodge.Invoke();
+        Move();
         StartCoroutine(SetDodgeBack(DodgeTimeInSeconds));
     }
-   
-    private IEnumerator SetSwipeBack(float seconds)
+
+    protected Vector3 _originalLoc;
+    public void Move()
     {
-       IsSwiping = true;
-       yield return new WaitForSeconds(seconds);
-       IsSwiping = false;
+        LeanTween.moveX(gameObject, 5f, .2f);
     }
-    
     private IEnumerator SetDodgeBack(float seconds)
     {
        IsDodging = true;
        yield return new WaitForSeconds(seconds);
-       IsDodging = false;
+       LeanTween.moveX(gameObject, _originalLoc.x, .4f)
+           .setOnComplete((() =>
+           {
+               IsDodging = false;
+           }));
     }
     
 }

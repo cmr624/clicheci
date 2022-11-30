@@ -6,15 +6,19 @@ using UnityEngine;
 public class MoveAlongPath : MonoBehaviour
 {
 
-    public LeanTweenPath path;
-
+    public float timeToTravelArcInSeconds;
+    
     [HideInInspector]
     public bool Vulnerable = false;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
-        LTDescr tween = LeanTween.move(gameObject, path.vec3, 3f)
-            .setDelay(.1f);
+        MoveOnPath();
+    }
+
+    public void MoveOnPath()
+    {
+        LeanTween.move(gameObject, FishMinigameManager.Instance.JumpArc.vec3, timeToTravelArcInSeconds);
     }
 
    

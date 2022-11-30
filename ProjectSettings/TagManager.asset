@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Doctor
+  - BigFishy
   layers:
   - Default
   - TransparentFX
