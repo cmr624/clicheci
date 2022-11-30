@@ -99,9 +99,9 @@ public class CutsceneManager : MonoBehaviour
             shot2_text_GO.SetActive(false);
             Shot3.SetActive(true);
             shot3_text_GO.SetActive(true);
-            LeanTween.moveX(shot3_CEO_GO, 12f, 4f).setDelay(2f);
-            StartCoroutine(AnimationTimer_GO(3f, shot3_logo1_GO, false));
-            StartCoroutine(AnimationTimer_GO(5f, shot3_logo2_GO, false));
+            LeanTween.moveX(shot3_CEO_GO, 14f, 4f).setDelay(1f);
+            StartCoroutine(AnimationTimer_GO(2f, shot3_logo1_GO, false));
+            StartCoroutine(AnimationTimer_GO(3f, shot3_logo2_GO, false));
 
             //third sound
             Debug.Log("third sound");
