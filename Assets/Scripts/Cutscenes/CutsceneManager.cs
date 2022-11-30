@@ -130,7 +130,9 @@ public class CutsceneManager : MonoBehaviour
            // InbetweensManager.TVHeadAnimation();
 
             //load next scene
-            SceneManager.LoadScene("GnomeMinigameScene");
+            //SceneManager.LoadScene("GnomeMinigameScene");
+
+            GameFlowManager.Instance.LoadInBetween();
             break;
 
         default:

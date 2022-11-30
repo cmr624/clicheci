@@ -50,13 +50,23 @@ public class InbetweensManager : MonoBehaviour
 
 //     }
 
-    // void NextAnimation() {
-            //i don't think "null" will work for this bool
-    //     if (WonLastGame != null) {
-    //         CEOAnimation();
-    //     }
-    //     TVHeadAnimation();
-    // }
+
+    private void Start()
+    {
+        NextAnimation();
+    }
+    void NextAnimation()
+    {
+        //i don't think "null" will work for this bool
+        if (!GameFlowManager.Instance.FirstInBetween)
+        {
+            CEOAnimation();
+        }
+        else
+        {
+            TVHeadAnimation();
+        }
+    }
 
     public void CEOAnimation() {
         
@@ -79,6 +89,7 @@ public class InbetweensManager : MonoBehaviour
             //needs coroutine so it doesn't play right away
             //RedExclamation_GO.SetActive(true);
         }
+         StartCoroutine(LoadNext(1f));
 
     }
 
@@ -91,5 +102,13 @@ public class InbetweensManager : MonoBehaviour
 
          TVHeadAnimator.SetInteger("tvheadnum", TvHeadAnimNum);
 
+         StartCoroutine(LoadNext(3f));
+         //TVHeadAnimator.GetCurrentAnimatorClipInfo().GetValue(0).
+    }
+
+    private IEnumerator LoadNext(float t)
+    {
+        yield return new WaitForSeconds(t);
+        GameFlowManager.Instance.LoadNextMinigame();
     }
 }

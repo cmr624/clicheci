@@ -10,11 +10,11 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
 
     public string playerID = "the other cm";
     public int score = 0;
-    public string defaultScene;
+    public string defaultScene = "Inbetween Cutscenes";
     
     
     public string[] minigames;
-    public int currentMinigameIndexOrdered = 0;
+    private int currentMinigameIndexOrdered = -1;
 
     //win/lose
     //needs to be null, but can't be??
@@ -22,21 +22,37 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
 
 
 
+    /**
+     * CURRENT FLOW
+     *
+     * 1. main menu
+     * 2. play button selected, loading screen, intro cutscene
+     * 3. intro cutscene ends. pitch begins, load in betweens
+     * 4. play in between, play associated minigame
+     * 5. back to in between, play associated reaction.
+     */
+
     private void Start()
     {
         Debug.Log(Instance.score);
     }
 
+
+    public string IntroCutscene = "IntroCutscene";
+    public void PlayButtonPressed()
+    {
+        MMSceneLoadingManager.LoadScene("IntroCutscene", LoadingSceneName);
+    }
+
     public void LoadScene(string name)
     {
-        MMSceneLoadingManager.LoadScene(name, "LoadingScreen");
+        MMSceneLoadingManager.LoadScene(name, LoadingSceneName);
     }
     
-    public void LoadNextScene()
+    public void LoadNextMinigame()
     {
-        
-        
-        MMSceneLoadingManager.LoadScene(minigames[currentMinigameIndexOrdered], "LoadingScreen");
+        currentMinigameIndexOrdered++;
+        MMSceneLoadingManager.LoadScene(minigames[currentMinigameIndexOrdered], LoadingSceneName);
         // remove if statement laterr
         /*
         if (currentMinigameIndexOrdered < 1)
@@ -45,6 +61,19 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
             currentMinigameIndexOrdered++;
         }*/
     }
+
+    public string LoadingSceneName = "LoadingScreen";
+    public string InBetweensSceneName = "Inbetween Cutscenes";
+
+    public bool FirstInBetween = true;
+    public void LoadInBetween()
+    {
+        if (FirstInBetween)
+        {
+            FirstInBetween = false;
+        }
+        MMSceneLoadingManager.LoadScene(InBetweensSceneName, LoadingSceneName); 
+    }
     
     // on complete, load back the default scene.
     public void MinigameComplete()
@@ -52,6 +81,6 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
         WonLastGame = true;
         Instance.score+=1;
         MMSoundManager.Instance.StopTrack(MMSoundManager.MMSoundManagerTracks.Music);
-        MMSceneLoadingManager.LoadScene(defaultScene, "LoadingScreen");
+        MMSceneLoadingManager.LoadScene(defaultScene, LoadingSceneName);
     }
 }

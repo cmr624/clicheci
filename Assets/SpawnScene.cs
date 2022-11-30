@@ -6,7 +6,7 @@ public class SpawnScene : MonoBehaviour
 {
    public void LoadNextScene()
    {
-      GameFlowManager.Instance.LoadNextScene();
+      //GameFlowManager.Instance.LoadNextScene();
    }
 
    public void LoadScene(string name)

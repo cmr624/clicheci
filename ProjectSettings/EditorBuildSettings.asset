@@ -6,11 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/GameFlowTestScene.unity
-    guid: 4d6228a6a3c974466ac898ce8596808d
-  - enabled: 1
-    path: Assets/Feel/MMTools/Tools/MMSceneLoading/LoadingScreens/LoadingScreen.unity
+    path: Assets/Scenes/FLOW/LoadingScreen.unity
     guid: 888394d52616e5e42b3b54c3f2bbd3eb
+  - enabled: 1
+    path: Assets/Scenes/FLOW/MainMenu.unity
+    guid: 7ef19aed473d646fea0702081d4ac694
+  - enabled: 1
+    path: Assets/Scenes/FLOW/InbetweenCutscenes.unity
+    guid: e8c693f15d00b4cedb662c6911a25151
   - enabled: 1
     path: Assets/Scenes/Minigames/Gnome/GnomeMinigameScene.unity
     guid: 06c7dc59ffc0e49a59a79e177e8be614
@@ -20,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Fish/Fish.unity
     guid: f6332a78e0ec24fbda70a884c6655166
+  - enabled: 1
+    path: Assets/Scenes/FLOW/IntroCutscene.unity
+    guid: 41bad120bb7a848f3a6344911050edf7
   m_configObjects: {}
