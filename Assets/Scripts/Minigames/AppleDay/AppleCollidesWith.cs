@@ -19,6 +19,8 @@ public class AppleCollidesWith : MonoBehaviour
            
             dr.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             //put 
+            AppleDayMinigameManager.Instance.DoctorSFX.StopFeedbacks();
+            AppleDayMinigameManager.Instance.DoctorSFXDies.PlayFeedbacks();
             OnExplode.Invoke();
             AppleDayMinigameManager.Instance.CompleteGame();
             

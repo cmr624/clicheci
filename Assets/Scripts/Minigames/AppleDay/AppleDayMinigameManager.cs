@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using MoreMountains.Feedbacks;
 using MoreMountains.Tools;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
     protected GameFlowManager _flowManagerInstance;
     
     public GameObject Doctor;
+    public MMF_Player DoctorSFX;
+    public MMF_Player DoctorSFXDies;
 
     public GameObject AppleGun;
     public int MaxAmmo = 1;
