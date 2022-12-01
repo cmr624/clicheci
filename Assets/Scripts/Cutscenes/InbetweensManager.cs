@@ -23,6 +23,14 @@ public class InbetweensManager : MonoBehaviour
     [Header("TV Heads")]
     [SerializeField] int TvHeadAnimNum= 0;
     [SerializeField] Animator TVHeadAnimator;
+    [SerializeField] GameObject TVHeadScene_GO;
+    [SerializeField] GameObject TVHeads_GO;
+    [SerializeField] float tvHeadMovement;
+    [SerializeField] float tvHeadMoveTime;
+
+    [Header("TV Head Logos")]
+    [SerializeField] List<GameObject> Logos;
+    
 
     [Header("CEO Win")]
     [SerializeField] GameObject Win_GO;
@@ -57,7 +65,6 @@ public class InbetweensManager : MonoBehaviour
     }
     void NextAnimation()
     {
-        //i don't think "null" will work for this bool
         if (!GameFlowManager.Instance.FirstInBetween)
         {
             CEOAnimation();
@@ -98,12 +105,24 @@ public class InbetweensManager : MonoBehaviour
             win_text_GO.SetActive(false);
             Lose_GO.SetActive(false);
             lose_text_GO.SetActive(false);
-        TvHeadAnimNum = Random.Range(1, 5);
+        TVHeadScene_GO.SetActive(true);    
+        TvHeadAnimNum = Random.Range(1, 5);    
+        TVHeadAnimator.SetInteger("tvheadNum", TvHeadAnimNum);
+        LeanTween.moveX(TVHeads_GO, tvHeadMovement, tvHeadMoveTime);
+        
+        //these are random now, but we could have the number correlate to the minigame that played before?
+        GameObject logoAnim = Logos[Random.Range(0, Logos.Count)] ;
 
-         TVHeadAnimator.SetInteger("tvheadnum", TvHeadAnimNum);
+        StartCoroutine(AnimationTimer_GO(3.5f, logoAnim, true));
 
          StartCoroutine(LoadNext(3f));
          //TVHeadAnimator.GetCurrentAnimatorClipInfo().GetValue(0).
+    }
+
+
+    IEnumerator AnimationTimer_GO(float seconds, GameObject gameObject, bool myBool){
+        yield return new WaitForSeconds(seconds);
+        gameObject.SetActive(myBool);
     }
 
     private IEnumerator LoadNext(float t)
