@@ -83,11 +83,17 @@ jobs:
         with:
           targetPlatform: WebGL
           allowDirtyBuild: true
-
+      
       - uses: actions/upload-artifact@v2
         with:
           name: build-WebGL
           path: build/WebGL
+
+      - name: Download a single artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build-WebGL
+
 
   buildWindows:
     needs: testRunner

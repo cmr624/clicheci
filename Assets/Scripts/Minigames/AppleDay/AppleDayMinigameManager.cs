@@ -132,8 +132,9 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
 
     private IEnumerator EndGame(float seconds)
     {
-       yield return new WaitForSeconds(seconds); 
-        _flowManagerInstance.MinigameComplete();
+       yield return new WaitForSeconds(seconds);
+       _flowManagerInstance.GameOver = true;
+       _flowManagerInstance.MinigameComplete();
     }
 
     public void StartSequence()

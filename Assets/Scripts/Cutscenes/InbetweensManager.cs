@@ -23,6 +23,14 @@ public class InbetweensManager : MonoBehaviour
     [Header("TV Heads")]
     [SerializeField] int TvHeadAnimNum= 0;
     [SerializeField] Animator TVHeadAnimator;
+    [SerializeField] GameObject TVHeadScene_GO;
+    [SerializeField] GameObject TVHeads_GO;
+    [SerializeField] float tvHeadMovement;
+    [SerializeField] float tvHeadMoveTime;
+
+    [Header("TV Head Logos")]
+    [SerializeField] List<GameObject> Logos;
+    
 
     [Header("CEO Win")]
     [SerializeField] GameObject Win_GO;
@@ -39,32 +47,37 @@ public class InbetweensManager : MonoBehaviour
     [SerializeField] GameObject RedExclamation_GO;
     [SerializeField] GameObject lose_text_GO;
 
-
-// void Start()
-//     {
-    
-
-//     //    NextAnimation();
-//     //    Button btn =  nextButton.GetComponent<Button>();
-//     //    btn.onClick.AddListener(NextAnimation);
-
-//     }
-
+    [Header("Outro Anim")]
+    [SerializeField] GameObject Outro_GO;
+    [SerializeField] GameObject Winner_Text_GO;
+    [SerializeField] GameObject Loser_Text_GO;
+    [SerializeField] GameObject PlayAgain_BTN;
+    [SerializeField] bool gameIsOver;
 
     private void Start()
     {
+        Button btn =  PlayAgain_BTN.GetComponent<Button>();
+        btn.onClick.AddListener(PlayAgain);
+        if (GameFlowManager.Instance.GameOver)
+        {
+            gameIsOver = true;
+        }
+        
         NextAnimation();
     }
     void NextAnimation()
     {
-        //i don't think "null" will work for this bool
-        if (!GameFlowManager.Instance.FirstInBetween)
+        if (GameFlowManager.Instance.FirstInBetween)
         {
-            CEOAnimation();
+            GameFlowManager.Instance.FirstInBetween = false;
+            TVHeadAnimation();
         }
+        else if (gameIsOver){
+            OutroAnimation();
+        } 
         else
         {
-            TVHeadAnimation();
+            CEOAnimation();
         }
     }
 
@@ -76,9 +89,7 @@ public class InbetweensManager : MonoBehaviour
             win_text_GO.SetActive(true);
             CEOWinAnimator.Play("CEO_Thumbs_Anim");
             
-            //needs coroutine so it doesn't play right away
-            // GreenExclamation_GO.SetActive(true);
-
+            StartCoroutine(AnimationTimer_GO(2f, GreenExclamation_GO, true));
         } else {
             //play Lose Animation
             Lose_GO.SetActive(true);
@@ -89,21 +100,61 @@ public class InbetweensManager : MonoBehaviour
             //needs coroutine so it doesn't play right away
             //RedExclamation_GO.SetActive(true);
         }
-         StartCoroutine(LoadNext(1f));
+         //StartCoroutine(LoadNext(1f));
+         StartCoroutine(PlayTVHeads(3f));
 
     }
 
+    private IEnumerator PlayTVHeads(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        TVHeadAnimation();
+    }
+    
     public void TVHeadAnimation() {
         Win_GO.SetActive(false);
             win_text_GO.SetActive(false);
             Lose_GO.SetActive(false);
             lose_text_GO.SetActive(false);
-        TvHeadAnimNum = Random.Range(1, 5);
+        TVHeadScene_GO.SetActive(true);    
+        TvHeadAnimNum = Random.Range(1, 5);    
+        TVHeadAnimator.SetInteger("tvheadNum", TvHeadAnimNum);
+        LeanTween.moveX(TVHeads_GO, tvHeadMovement, tvHeadMoveTime);
+        
+        //these are random now, but we could have the number correlate to the minigame that played before?
+        GameObject logoAnim = Logos[Random.Range(0, Logos.Count)] ;
 
-         TVHeadAnimator.SetInteger("tvheadnum", TvHeadAnimNum);
+        StartCoroutine(AnimationTimer_GO(3.5f, logoAnim, true));
 
-         StartCoroutine(LoadNext(3f));
+        StartCoroutine(LoadNext(8f));
          //TVHeadAnimator.GetCurrentAnimatorClipInfo().GetValue(0).
+    }
+
+    void PlayAgain()
+    {
+        GameFlowManager.Instance.PlayAgain();
+    }
+
+    public void OutroAnimation() {
+
+        Outro_GO.SetActive(true);
+
+        StartCoroutine(AnimationTimer_GO(3f, PlayAgain_BTN,true));
+
+//HERE!!!        //needs to reflect whether the player won at least 2 of 3 games.
+        if (true) {
+            Winner_Text_GO.SetActive(true);
+        } else {
+            Loser_Text_GO.SetActive(true);
+        }
+
+
+    }
+
+
+    IEnumerator AnimationTimer_GO(float seconds, GameObject gameObject, bool myBool){
+        yield return new WaitForSeconds(seconds);
+        gameObject.SetActive(myBool);
     }
 
     private IEnumerator LoadNext(float t)
