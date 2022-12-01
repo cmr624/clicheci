@@ -78,7 +78,7 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
     // on complete, load back the default scene.
     public void MinigameComplete()
     {
-        WonLastGame = true;
+        
         Instance.score+=1;
         MMSoundManager.Instance.StopTrack(MMSoundManager.MMSoundManagerTracks.Music);
         MMSceneLoadingManager.LoadScene(defaultScene, LoadingSceneName);

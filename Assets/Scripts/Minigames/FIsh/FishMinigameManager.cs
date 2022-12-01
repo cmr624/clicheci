@@ -35,6 +35,11 @@ public class FishMinigameManager :MMSingleton<FishMinigameManager>
 
     public void GameOverSequence()
     {
+        if (Lives > 0) {
+             _flowManagerInstance.WonLastGame = true;
+        }  else {
+            _flowManagerInstance.WonLastGame = false;
+        }
        _flowManagerInstance.MinigameComplete(); 
     }
 
@@ -84,5 +89,7 @@ public class FishMinigameManager :MMSingleton<FishMinigameManager>
         {
             Bear.Dodge();
         }
+
+        
     }
 }

@@ -37,7 +37,7 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
     private float _score;
     public float Score => _score;
     public GameObject loseFill;
-    public float highScore = 100;
+    public float highScore;
 
 
     protected void Start()
@@ -50,7 +50,7 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
 
        
 
-        //set player score to what we want it to start writh (half way?) 
+        //set player score to what we want it to start with (half way?) 
         _score = startingScore;
         scoreFill.fillAmount = (_score/highScore);
         Debug.Log("Starting Score is " + _score + " points");
@@ -83,18 +83,26 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
         AdjustScoreFill();
         if (_score < 0)
         {
+            Debug.Log("Score is less than zero");
             GameOver();
         }
     }
 
     private IEnumerator Lose() {
-        loseFill.SetActive(true);
+        
+        if (_score < 0) {
+            loseFill.SetActive(true);
+            _flowManagerInstance.WonLastGame = false;
+        } else {
+            _flowManagerInstance.WonLastGame = true;
+        }
         StopCoroutine(_timer);
         yield return new WaitForSeconds(2f);
         _flowManagerInstance.MinigameComplete();
     }
 
     void GameOver() {
+
         StartCoroutine(Lose());
     }
 
@@ -103,6 +111,7 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
     {
         yield return new WaitForSeconds(roundTime);
         // ending sequence
+        Debug.Log("Time Up, you win!");
        GameOver();
     }
 
