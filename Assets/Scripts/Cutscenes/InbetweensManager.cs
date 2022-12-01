@@ -58,22 +58,26 @@ public class InbetweensManager : MonoBehaviour
     {
         Button btn =  PlayAgain_BTN.GetComponent<Button>();
         btn.onClick.AddListener(PlayAgain);
-
+        if (GameFlowManager.Instance.GameOver)
+        {
+            gameIsOver = true;
+        }
+        
         NextAnimation();
-
     }
     void NextAnimation()
     {
         if (GameFlowManager.Instance.FirstInBetween)
         {
+            GameFlowManager.Instance.FirstInBetween = false;
             TVHeadAnimation();
         }
         else if (gameIsOver){
             OutroAnimation();
-        } else
+        } 
+        else
         {
             CEOAnimation();
-            TVHeadAnimation();
         }
     }
 
@@ -96,10 +100,17 @@ public class InbetweensManager : MonoBehaviour
             //needs coroutine so it doesn't play right away
             //RedExclamation_GO.SetActive(true);
         }
-         StartCoroutine(LoadNext(1f));
+         //StartCoroutine(LoadNext(1f));
+         StartCoroutine(PlayTVHeads(3f));
 
     }
 
+    private IEnumerator PlayTVHeads(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        TVHeadAnimation();
+    }
+    
     public void TVHeadAnimation() {
         Win_GO.SetActive(false);
             win_text_GO.SetActive(false);
@@ -115,12 +126,13 @@ public class InbetweensManager : MonoBehaviour
 
         StartCoroutine(AnimationTimer_GO(3.5f, logoAnim, true));
 
-        StartCoroutine(LoadNext(3f));
+        StartCoroutine(LoadNext(8f));
          //TVHeadAnimator.GetCurrentAnimatorClipInfo().GetValue(0).
     }
 
-    void PlayAgain() {
-        SceneManager.LoadScene("MainMenu");
+    void PlayAgain()
+    {
+        GameFlowManager.Instance.PlayAgain();
     }
 
     public void OutroAnimation() {
