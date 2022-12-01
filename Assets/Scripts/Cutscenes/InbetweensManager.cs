@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 using TMPro;
 
 
@@ -19,6 +20,10 @@ public class InbetweensManager : MonoBehaviour
 //if lost show negative CEO interaction
 
 //create order of game variants and based on that, determine which logos go in the tvhead
+
+    [Header("Music")]
+    public UnityEvent InbetweenEvent;
+    public UnityEvent OutroEvent;
 
     [Header("TV Heads")]
     [SerializeField] int TvHeadAnimNum= 0;
@@ -67,16 +72,19 @@ public class InbetweensManager : MonoBehaviour
     }
     void NextAnimation()
     {
-        if (GameFlowManager.Instance.FirstInBetween)
+        if (!GameFlowManager.Instance.FirstInBetween)
         {
             GameFlowManager.Instance.FirstInBetween = false;
+            InbetweenEvent.Invoke();
             TVHeadAnimation();
         }
         else if (gameIsOver){
+            
             OutroAnimation();
         } 
         else
         {
+            InbetweenEvent.Invoke();
             CEOAnimation();
         }
     }
@@ -136,7 +144,7 @@ public class InbetweensManager : MonoBehaviour
     }
 
     public void OutroAnimation() {
-
+        OutroEvent.Invoke();
         Outro_GO.SetActive(true);
 
         StartCoroutine(AnimationTimer_GO(3f, PlayAgain_BTN,true));
