@@ -75,7 +75,27 @@ public class Rock : MonoBehaviour
         {
             Gnome.SetActive(true);
             Animator gnomeAnimator = Gnome.GetComponent<Animator>();
-            gnomeAnimator.Play("gnomeMoon");
+
+            float f = Random.Range(0f, 4f);
+
+            if (f < 1f)
+            {
+                gnomeAnimator.SetTrigger("Scary");
+                
+            }
+            else if (f >= 1f && f < 2f)
+            {
+                gnomeAnimator.SetTrigger("Moon");
+            }
+            else if (f >= 2f && f < 3f)
+            {
+                gnomeAnimator.SetTrigger("Drunk");
+            }
+            else
+            {
+                gnomeAnimator.SetTrigger("Happy");
+            }
+            
             GnomeMinigameManager.Instance.AddScore(GnomeData.scoreValue);
             Debug.Log("Gnome earned " + GnomeData.scoreValue + " points");
             GnomeMinigameManager.Instance.GnomeFeedback.PlayFeedbacks();

@@ -62,9 +62,10 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
 
     public float RespawnInSecondsTimer = 4f;
 
+    private Coroutine _respawningCoroutine;
     public void Respawn(GameObject go)
     {
-       StartCoroutine(RespawnTimer(RespawnInSecondsTimer, go)); 
+       _respawningCoroutine = StartCoroutine(RespawnTimer(RespawnInSecondsTimer, go)); 
     }
 
     private IEnumerator RespawnTimer(float timeInSeconds, GameObject go)
@@ -112,7 +113,7 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
         yield return new WaitForSeconds(roundTime);
         // ending sequence
         Debug.Log("Time Up, you win!");
-       GameOver();
+        GameOver();
     }
 
     private void AdjustScoreFill() {
