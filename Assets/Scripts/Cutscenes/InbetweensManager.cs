@@ -64,8 +64,7 @@ public class InbetweensManager : MonoBehaviour
     }
     void NextAnimation()
     {
-        // if (GameFlowManager.Instance.FirstInBetween)
-        if (false)
+        if (GameFlowManager.Instance.FirstInBetween)
         {
             TVHeadAnimation();
         }
@@ -80,8 +79,7 @@ public class InbetweensManager : MonoBehaviour
 
     public void CEOAnimation() {
         
-        // if (GameFlowManager.Instance.WonLastGame) {
-            if (true) {
+        if (GameFlowManager.Instance.WonLastGame) {
             //play Won animation
             Win_GO.SetActive(true);
             win_text_GO.SetActive(true);
