@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 using TMPro;
 
 
@@ -22,6 +23,7 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField] Animator shot1_CEO_Anim;
     [SerializeField] GameObject shot1_graph_Anim;
     [SerializeField] GameObject shot1_text_GO;
+    public UnityEvent WompEvent;
 
     [Header("Second Shot")]
     [SerializeField] GameObject Shot2;
@@ -29,6 +31,7 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField] AnimationClip thinking_idea_clip;
     [SerializeField] GameObject shot2_bulb_GO;
     [SerializeField] GameObject shot2_text_GO;
+    public UnityEvent DingEvent;
 
     [Header("Third Shot")]
     [SerializeField] GameObject Shot3;
@@ -37,17 +40,20 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField] GameObject shot3_logo1_GO;
     [SerializeField] GameObject shot3_logo2_GO;
     [SerializeField] GameObject shot3_text_GO;
+    public UnityEvent PacmanEvent;
 
     [Header("Fourth Shot")]
     [SerializeField] GameObject Shot4;
     [SerializeField] Animator shot4_CEO_Anim;
     [SerializeField] Animator shot4_Money_Anim;
     [SerializeField] GameObject shot4_text_GO;
+    public UnityEvent MoneyEvent;
 
     [Header("Fifth Shot")]
     [SerializeField] GameObject Shot5;
     //[SerializeField] GameObject shot5_pitchRoomDoor;
     [SerializeField] GameObject shot5_text_GO;
+    public UnityEvent NeeextEvent;
 
    public Button nextButton;
 
@@ -77,7 +83,7 @@ public class CutsceneManager : MonoBehaviour
             Shot1.SetActive(true);
             shot1_text_GO.SetActive(true);
             //HARD CODED:
-            StartCoroutine(AnimationTimer_GO(2f, shot1_graph_Anim, true));
+            StartCoroutine(AnimationTimer_GO(2f, shot1_graph_Anim, true, WompEvent));
 
             Debug.Log("first sound");
 
@@ -89,7 +95,7 @@ public class CutsceneManager : MonoBehaviour
             shot2_text_GO.SetActive(true);
 
             shot2_CEO_Anim.Play("Thinking_Idea");
-            StartCoroutine(AnimationTimer_GO(thinking_idea_clip.length, shot2_bulb_GO, true));
+            StartCoroutine(AnimationTimer_GO(thinking_idea_clip.length, shot2_bulb_GO, true, DingEvent));
 
             //second sound
             Debug.Log("second sound");
@@ -99,9 +105,10 @@ public class CutsceneManager : MonoBehaviour
             shot2_text_GO.SetActive(false);
             Shot3.SetActive(true);
             shot3_text_GO.SetActive(true);
+            PacmanEvent.Invoke();
             LeanTween.moveX(shot3_CEO_GO, 14f, 4f).setDelay(1f);
-            StartCoroutine(AnimationTimer_GO(2f, shot3_logo1_GO, false));
-            StartCoroutine(AnimationTimer_GO(3f, shot3_logo2_GO, false));
+            StartCoroutine(AnimationTimer_GO(2f, shot3_logo1_GO, false, null));
+            StartCoroutine(AnimationTimer_GO(3f, shot3_logo2_GO, false, null));
 
             //third sound
             Debug.Log("third sound");
@@ -111,7 +118,7 @@ public class CutsceneManager : MonoBehaviour
             shot3_text_GO.SetActive(false);
             Shot4.SetActive(true);
             shot4_text_GO.SetActive(true);
-
+            MoneyEvent.Invoke();
             //4th sound
             Debug.Log("fourth sound");
             break;
@@ -120,7 +127,7 @@ public class CutsceneManager : MonoBehaviour
             shot4_text_GO.SetActive(false);
             Shot5.SetActive(true);
             shot5_text_GO.SetActive(true);
-
+            NeeextEvent.Invoke();
             //final sound
             Debug.Log("fifth sound");
             break;
@@ -142,9 +149,13 @@ public class CutsceneManager : MonoBehaviour
 
     }
 
-    IEnumerator AnimationTimer_GO(float seconds, GameObject gameObject, bool myBool){
+    IEnumerator AnimationTimer_GO(float seconds, GameObject gameObject, bool myBool, UnityEvent sound){
         
         yield return new WaitForSeconds(seconds);
+        
+        if (sound != null) {
+          sound.Invoke();  
+        }
         gameObject.SetActive(myBool);
 
     }

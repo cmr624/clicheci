@@ -47,45 +47,47 @@ public class InbetweensManager : MonoBehaviour
     [SerializeField] GameObject RedExclamation_GO;
     [SerializeField] GameObject lose_text_GO;
 
-
-// void Start()
-//     {
-    
-
-//     //    NextAnimation();
-//     //    Button btn =  nextButton.GetComponent<Button>();
-//     //    btn.onClick.AddListener(NextAnimation);
-
-//     }
-
+    [Header("Outro Anim")]
+    [SerializeField] GameObject Outro_GO;
+    [SerializeField] GameObject Winner_Text_GO;
+    [SerializeField] GameObject Loser_Text_GO;
+    [SerializeField] GameObject PlayAgain_BTN;
+    [SerializeField] bool gameIsOver;
 
     private void Start()
     {
+        Button btn =  PlayAgain_BTN.GetComponent<Button>();
+        btn.onClick.AddListener(PlayAgain);
+
         NextAnimation();
+
     }
     void NextAnimation()
     {
-        if (!GameFlowManager.Instance.FirstInBetween)
+        // if (GameFlowManager.Instance.FirstInBetween)
+        if (false)
+        {
+            TVHeadAnimation();
+        }
+        else if (gameIsOver){
+            OutroAnimation();
+        } else
         {
             CEOAnimation();
-        }
-        else
-        {
             TVHeadAnimation();
         }
     }
 
     public void CEOAnimation() {
         
-        if (GameFlowManager.Instance.WonLastGame) {
+        // if (GameFlowManager.Instance.WonLastGame) {
+            if (true) {
             //play Won animation
             Win_GO.SetActive(true);
             win_text_GO.SetActive(true);
             CEOWinAnimator.Play("CEO_Thumbs_Anim");
             
-            //needs coroutine so it doesn't play right away
-            // GreenExclamation_GO.SetActive(true);
-
+            StartCoroutine(AnimationTimer_GO(2f, GreenExclamation_GO, true));
         } else {
             //play Lose Animation
             Lose_GO.SetActive(true);
@@ -115,8 +117,28 @@ public class InbetweensManager : MonoBehaviour
 
         StartCoroutine(AnimationTimer_GO(3.5f, logoAnim, true));
 
-         StartCoroutine(LoadNext(3f));
+        StartCoroutine(LoadNext(3f));
          //TVHeadAnimator.GetCurrentAnimatorClipInfo().GetValue(0).
+    }
+
+    void PlayAgain() {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void OutroAnimation() {
+
+        Outro_GO.SetActive(true);
+
+        StartCoroutine(AnimationTimer_GO(3f, PlayAgain_BTN,true));
+
+//HERE!!!        //needs to reflect whether the player won at least 2 of 3 games.
+        if (true) {
+            Winner_Text_GO.SetActive(true);
+        } else {
+            Loser_Text_GO.SetActive(true);
+        }
+
+
     }
 
 
