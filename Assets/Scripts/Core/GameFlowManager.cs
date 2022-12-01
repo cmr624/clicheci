@@ -38,9 +38,10 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
 
     public void PlayAgain()
     {
-        GameOver = false;
-        currentMinigameIndexOrdered = 0;
-        
+        _instance.GameOver = false;
+        _instance.currentMinigameIndexOrdered = -1;
+        _instance.FirstInBetween = true;
+        MMSceneLoadingManager.LoadScene("MainMenu", LoadingSceneName);
     }
 
     public string IntroCutscene = "IntroCutscene";
@@ -58,15 +59,7 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
     public void LoadNextMinigame()
     {
         currentMinigameIndexOrdered++;
-        if (currentMinigameIndexOrdered >= 3)
-        {
-            GameOver = true;
-            LoadInBetween();
-        }
-        else
-        {
-            MMSceneLoadingManager.LoadScene(minigames[currentMinigameIndexOrdered], LoadingSceneName);
-        }
+        MMSceneLoadingManager.LoadScene(minigames[currentMinigameIndexOrdered], LoadingSceneName);
     }
 
     public string LoadingSceneName = "LoadingScreen";
