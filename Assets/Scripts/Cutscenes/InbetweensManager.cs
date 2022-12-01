@@ -72,7 +72,7 @@ public class InbetweensManager : MonoBehaviour
     }
     void NextAnimation()
     {
-        if (!GameFlowManager.Instance.FirstInBetween)
+        if (GameFlowManager.Instance.FirstInBetween)
         {
             GameFlowManager.Instance.FirstInBetween = false;
             InbetweenEvent.Invoke();

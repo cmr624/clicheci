@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52fd40b7bb06746d5ae1b4104ea4179e, type: 3}
+  m_Name: Sequence3
+  m_EditorClassIdentifier: 
+  Sequence:
+  - LocationFrom: 4l
+    LocationTo: 4r
+    TimerToSpawn: 4
+    ScaleChange: 1
+    WalkingTime: 1.5
+  - LocationFrom: 2l
+    LocationTo: 2r
+    TimerToSpawn: 2
+    ScaleChange: 1.5
+    WalkingTime: 1.5
+  - LocationFrom: 2r
+    LocationTo: 2l
+    TimerToSpawn: 1
+    ScaleChange: 1
+    WalkingTime: 1.5
+  - LocationFrom: 1r
+    LocationTo: 1l
+    TimerToSpawn: 2
+    ScaleChange: 1.5
+    WalkingTime: 1

@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Feedbacks;
 using MoreMountains.Tools;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
 {
@@ -16,7 +18,8 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
     public GameObject AppleGun;
     public int MaxAmmo = 1;
 
-    public DoctorSequenceData SequenceData;
+    public DoctorSequenceData[] SequenceDatas;
+    private DoctorSequenceData SequenceData;
 
     // left doors
     private Transform _4l;
@@ -51,6 +54,20 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
         _2r = GameObject.Find("2r").transform;
         _1r = GameObject.Find("1r").transform;
 
+
+        float f = Random.Range(0f, 1f);
+        if (f < .3f)
+        {
+            SequenceData = SequenceDatas[0];
+        }
+        else if (f < .6f && f >= .3f)
+        {
+            SequenceData = SequenceDatas[1];
+        }
+        else
+        {
+            SequenceData = SequenceDatas[2];
+        }
         StartCoroutine(IterateSequence());
 
         GameOver = false;
