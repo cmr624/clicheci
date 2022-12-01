@@ -40,6 +40,7 @@ public class FishMinigameManager :MMSingleton<FishMinigameManager>
         }  else {
             _flowManagerInstance.WonLastGame = false;
         }
+        StopAllCoroutines();
        _flowManagerInstance.MinigameComplete(); 
     }
 

@@ -20,8 +20,6 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
     //needs to be null, but can't be??
     public bool WonLastGame;
 
-
-
     /**
      * CURRENT FLOW
      *
@@ -38,28 +36,30 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
     }
 
 
+    public void PlayAgain()
+    {
+        _instance.GameOver = false;
+        _instance.currentMinigameIndexOrdered = -1;
+        _instance.FirstInBetween = true;
+        MMSceneLoadingManager.LoadScene("MainMenu", LoadingSceneName);
+    }
+
     public string IntroCutscene = "IntroCutscene";
     public void PlayButtonPressed()
     {
-        MMSceneLoadingManager.LoadScene("IntroCutscene", LoadingSceneName);
+        MMSceneLoadingManager.LoadScene(IntroCutscene, LoadingSceneName);
     }
 
     public void LoadScene(string name)
     {
         MMSceneLoadingManager.LoadScene(name, LoadingSceneName);
     }
-    
+
+    [HideInInspector] public bool GameOver = false;
     public void LoadNextMinigame()
     {
         currentMinigameIndexOrdered++;
         MMSceneLoadingManager.LoadScene(minigames[currentMinigameIndexOrdered], LoadingSceneName);
-        // remove if statement laterr
-        /*
-        if (currentMinigameIndexOrdered < 1)
-        {
-            MMSceneLoadingManager.LoadScene(minigames[currentMinigameIndexOrdered], "LoadingScreen");
-            currentMinigameIndexOrdered++;
-        }*/
     }
 
     public string LoadingSceneName = "LoadingScreen";
@@ -68,10 +68,7 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
     public bool FirstInBetween = true;
     public void LoadInBetween()
     {
-        if (FirstInBetween)
-        {
-            FirstInBetween = false;
-        }
+        
         MMSceneLoadingManager.LoadScene(InBetweensSceneName, LoadingSceneName); 
     }
     
@@ -80,6 +77,7 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
     {
         
         Instance.score+=1;
+        MMSoundManager.Instance.StopAllSounds();
         MMSoundManager.Instance.StopTrack(MMSoundManager.MMSoundManagerTracks.Music);
         MMSceneLoadingManager.LoadScene(defaultScene, LoadingSceneName);
     }
