@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using MoreMountains.Feedbacks;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class AppleGunShoot : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class AppleGunShoot : MonoBehaviour
     public Transform SpawnPoint;
 
     public float TimeOfApple;
-
+    public UnityEvent OnShoot;
     public Transform AppleTo;
 
     protected MMF_Player _player;
@@ -31,7 +32,7 @@ public class AppleGunShoot : MonoBehaviour
         StartCoroutine(StopAnimation(.5f));
         
         _player.PlayFeedbacks();
-        
+        OnShoot.Invoke();
         // create hte apple from the prefab
         GameObject Apple = Instantiate(AppleProjectile, SpawnPoint.position, SpawnPoint.rotation);
         // actually shoot the apple
