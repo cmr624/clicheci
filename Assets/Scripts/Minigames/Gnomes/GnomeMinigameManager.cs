@@ -99,6 +99,7 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
         }
         StopCoroutine(_timer);
         yield return new WaitForSeconds(2f);
+        _flowManagerInstance.score += _score;
         _flowManagerInstance.MinigameComplete();
     }
 

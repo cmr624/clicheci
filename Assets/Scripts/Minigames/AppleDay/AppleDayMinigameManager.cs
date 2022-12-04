@@ -151,6 +151,7 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
     {
        yield return new WaitForSeconds(seconds);
        _flowManagerInstance.GameOver = true;
+       _flowManagerInstance.score++;
        _flowManagerInstance.MinigameComplete();
     }
 
@@ -213,10 +214,7 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
             {
                 yield break;
             }
-            else
-            {
-                DrSr.enabled = false;
-            }
+            DrSr.enabled = false;
         }
         // you lose! because you didnt get the guy in time
         // play da game over screen
