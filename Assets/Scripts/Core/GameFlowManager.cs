@@ -8,14 +8,40 @@ using UnityEngine.SceneManagement;
 public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
 {
 
-    public string playerID = "the other cm";
-    public int score = 0;
     public string defaultScene = "Inbetween Cutscenes";
     
     
     public string[] minigames;
     private int currentMinigameIndexOrdered = -1;
 
+
+    /**
+     * CHAOS MODE
+     * minigames in any order
+     * minigame data (variants)
+     * overall score counter
+     * 
+     */
+
+    private bool _inChaosMode;
+
+    public string ChaosModeIntroSceneName;
+    public string ChaosModeInBetweenSceneName;
+    
+    public float score = 0f;
+    public string playerID = "the other cm";
+
+    public void StartChaosMode()
+    {
+        score = 0f;
+        currentMinigameIndexOrdered = -1;
+        defaultScene = ChaosModeIntroSceneName;
+        _inChaosMode = true;
+        LoadScene(ChaosModeIntroSceneName);
+    }
+    // 
+    
+    
     //win/lose
     //needs to be null, but can't be??
     public bool WonLastGame;
@@ -59,6 +85,10 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
     public void LoadNextMinigame()
     {
         currentMinigameIndexOrdered++;
+        if (currentMinigameIndexOrdered >= minigames.Length - 1 && _inChaosMode)
+        {
+            currentMinigameIndexOrdered = 0;
+        }
         MMSceneLoadingManager.LoadScene(minigames[currentMinigameIndexOrdered], LoadingSceneName);
     }
 

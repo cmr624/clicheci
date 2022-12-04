@@ -4,9 +4,20 @@ using UnityEngine;
 
 public class SpawnScene : MonoBehaviour
 {
-   public void LoadNextScene()
+   public void PlayAgain()
    {
-      //GameFlowManager.Instance.LoadNextScene();
+      GameFlowManager.Instance.PlayButtonPressed();
+   }
+
+   public void StartChaos()
+   {
+      GameFlowManager.Instance.StartChaosMode();
+   }
+   
+   
+   public void NextGame()
+   {
+      GameFlowManager.Instance.LoadNextMinigame();
    }
 
    public void LoadScene(string name)
