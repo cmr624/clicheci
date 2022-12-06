@@ -5,6 +5,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 using Lean.Touch;
 using MoreMountains.Feedbacks;
+using MoreMountains.Tools;
 
 public class Rock : MonoBehaviour
 {
@@ -23,30 +24,83 @@ public class Rock : MonoBehaviour
 
     [Header("Coins")]
     public GameObject Coin;
-    public SpawnedObjectData CoinData;
+    //public SpawnedObjectData CoinData;
 //    float coinPoints = 20f;
 
     [Header("Snakes")]
     public GameObject Snake;
-    public SpawnedObjectData SnakeData;
+    //public SpawnedObjectData SnakeData;
     // float snakePoints = -20f;
 
     [Header("Gnomes")]
     public GameObject Gnome;
-    public SpawnedObjectData GnomeData;
+    //public SpawnedObjectData GnomeData;
     // float gnomePoints = -10f;
 
+
+    public float RespawnTimer = 4f;
+
+    private Coroutine DeathCounter;
     private void Start()
     {
         _sprite = GetComponent<SpriteRenderer>();
         _rockAnimator = GetComponent<Animator>();
         _gnomeGameManager = GetComponent<GnomeMinigameManager>();
 
+        // set automatic respawn timer
+        DeathCounter = StartCoroutine(DeathTimer(Random.Range(RespawnTimer - 1, RespawnTimer)));
+        
+        ChooseColorValue();
+        // choose the value of the rock
         ChooseRockValue();
+
+        //LeanTween.scale(gameObject, new Vector3(1.1f, 1.1f, 1f), 1f).setLoopPingPong(-1);
     }
 
+    [SerializeField]
+    public GuessableObjectData[] ColorValueData;
+
+    public GuessableObjectData CurrentColor;
+    private void ChooseColorValue()
+    {
+        float[] weights = GetWeights(ColorValueData);
+        CurrentColor = ColorValueData[GetRandomWeightedIndex(weights)];
+        LeanTween.color(gameObject, CurrentColor.Color, Random.Range(1f, 2.0f));
+        //_sprite.color = CurrentColor.Color;
+    }
+
+    private float[] GetWeights(GuessableObjectData[] DataArray)
+    {
+        List<float> weights = new List<float>();
+        foreach (GuessableObjectData data in DataArray)
+        {
+            weights.Add(data.Weight);
+        }
+
+        return weights.ToArray();
+    }
+
+    // color based state
+    
+    // a color contains weights
+    // red = .4 gnome, .1 snake, .5 coin
+    // yellow = .25 snake, .10 gnome, .65 coin
+    // green = .9 coin, .01 gnome, .09 snake
+    
+    // however, how do we choose the red, yellow, green rates 
+    // so perhaps new data becomes:
+    // - color
+    // - weight of color
+    // - data set
+    //  - the data set contains 3 weights
 
     
+    
+    public IEnumerator DeathTimer(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        DestroyRockAndRespawn();
+    }
     
     public enum RockContains
     {
@@ -57,8 +111,17 @@ public class Rock : MonoBehaviour
 
     public void ChooseRockValue()
     {
-        float[] weights = {CoinData.probability, SnakeData.probability, GnomeData.probability};
-        int choice = GetRandomWeightedIndex(weights);
+       // float[] weights = {CoinData.probability, SnakeData.probability, GnomeData.probability};
+
+        List<float> weights = new List<float>();
+
+        foreach (var data in CurrentColor.DataSet)
+        {
+            weights.Add(data.probability);
+        }
+       
+        // TODO note we're hard coding the coin as the first thing in the dataset array, snake second, etc. this is bad news bears
+        int choice = GetRandomWeightedIndex(weights.ToArray());
 
         if (choice == 0)
         {
@@ -82,11 +145,22 @@ public class Rock : MonoBehaviour
         ChooseDisplay();
         
         // disable the sprite
-        _sprite.enabled = false;// SetActive(false);
-        // set the lean touch manager to off too
-        transform.GetComponentInParent<LeanSelectableByFinger>().enabled = false;
+        DestroyRockAndRespawn();
+    }
+
+    private void DestroyRockAndRespawn()
+    {
+        _sprite.enabled = false; // SetActive(false);
+        DisableClick();
 
         GnomeMinigameManager.Instance.Respawn(gameObject.transform.root.gameObject);
+    }
+
+    private void DisableClick()
+    {
+        //transform.GetComponentInParent<MMWiggle>().enabled = false;
+        // set the lean touch manager to off too
+        transform.GetComponentInParent<LeanSelectableByFinger>().enabled = false;
     }
 
     private void ChooseDisplay()
@@ -114,10 +188,11 @@ public class Rock : MonoBehaviour
         Coin.SetActive(true);
         Animator coinAnimator = Coin.GetComponent<Animator>();
         coinAnimator.Play("coinSpin");
-        GnomeMinigameManager.Instance.AddScore(CoinData.scoreValue);
+        
+        GnomeMinigameManager.Instance.AddScore(CurrentColor.DataSet[0].scoreValue);
         GnomeMinigameManager.Instance.CoinFeedback.PlayFeedbacks();
 
-        Debug.Log("Coin earned " + CoinData.scoreValue + " points");
+        //Debug.Log("Coin earned " + CoinData.scoreValue + " points");
     }
     private void DisplayGnome()
     {
@@ -143,7 +218,8 @@ public class Rock : MonoBehaviour
             gnomeAnimator.SetTrigger("Happy");
         }
 
-        GnomeMinigameManager.Instance.AddScore(GnomeData.scoreValue);
+        //TODO some primo shit code right here
+        GnomeMinigameManager.Instance.AddScore(CurrentColor.DataSet[2].scoreValue);
         //Debug.Log("Gnome earned " + GnomeData.scoreValue + " points");
         GnomeMinigameManager.Instance.GnomeFeedback.PlayFeedbacks();
     }
@@ -153,7 +229,9 @@ public class Rock : MonoBehaviour
         Snake.SetActive(true);
         Animator snakeAnimator = Snake.GetComponent<Animator>();
         snakeAnimator.Play("redSnakeAnim");
-        GnomeMinigameManager.Instance.AddScore(SnakeData.scoreValue);
+        //TODO add score back in
+
+        GnomeMinigameManager.Instance.AddScore(CurrentColor.DataSet[1].scoreValue);
         //Debug.Log("Snake earned " + SnakeData.scoreValue + " points");
 
         GnomeMinigameManager.Instance.SnakeFeedback.PlayFeedbacks();
@@ -162,6 +240,7 @@ public class Rock : MonoBehaviour
 
     public void BreakRock()
     {
+        StopCoroutine(DeathCounter);
        _rockAnimator.SetTrigger("clicked");
        GnomeMinigameManager.Instance.RockBreakFeedback.PlayFeedbacks();
        StartCoroutine(SelectSpawnedItem(.8f));
