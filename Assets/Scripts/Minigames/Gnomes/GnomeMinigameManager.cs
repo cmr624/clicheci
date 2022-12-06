@@ -40,6 +40,7 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
     public float highScore;
 
 
+    public bool skipTitle = true;
     protected void Start()
     {
        
@@ -56,7 +57,10 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
         Debug.Log("Starting Score is " + _score + " points");
 
         //display title screen first.
-        StartCoroutine(DisplayTitleScreen());
+        if (!skipTitle)
+        {
+            StartCoroutine(DisplayTitleScreen());
+        }
        
     }
 
@@ -70,9 +74,12 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
 
     private IEnumerator RespawnTimer(float timeInSeconds, GameObject go)
     {
-       yield return new WaitForSeconds(timeInSeconds);
-       Instantiate(RespawningRockPrefab, go.transform.position, go.transform.rotation);
+       Vector3 pos = go.transform.position;
+       Quaternion rot = go.transform.rotation;
+       yield return new WaitForSeconds(2f);
        Destroy(go);
+       yield return new WaitForSeconds(Random.Range(0f, timeInSeconds));
+       Instantiate(RespawningRockPrefab, pos, rot);
     }
     
     public void AddScore(float score)
@@ -170,6 +177,8 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
     }
 
     public MMF_Player MusicFeedback;
+    
+    // cm - let the record show i do not condone this negative self talk!!! <3 
     //don't put a coroutine in a coroutine, you dumb idiot, freaking... sheesh!!!
     IEnumerator FadeImage(bool fadeAway)
     {
