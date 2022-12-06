@@ -42,65 +42,46 @@ public class Rock : MonoBehaviour
         _rockAnimator = GetComponent<Animator>();
         _gnomeGameManager = GetComponent<GnomeMinigameManager>();
 
+        ChooseRockValue();
     }
 
-    IEnumerator SelectSpawnedItem(float numberOfSeconds){
-        
-        
-        yield return new WaitForSeconds(numberOfSeconds);
+
+    
+    
+    public enum RockContains
+    {
+       Coin,
+       Snake,
+       Gnome
+    }
+
+    public void ChooseRockValue()
+    {
         float[] weights = {CoinData.probability, SnakeData.probability, GnomeData.probability};
         int choice = GetRandomWeightedIndex(weights);
+
         if (choice == 0)
         {
-            Coin.SetActive(true);
-            Animator coinAnimator = Coin.GetComponent<Animator>();
-            coinAnimator.Play("coinSpin");
-            GnomeMinigameManager.Instance.AddScore(CoinData.scoreValue);
-            GnomeMinigameManager.Instance.CoinFeedback.PlayFeedbacks();
-
-            Debug.Log("Coin earned " + CoinData.scoreValue + " points");
-
+            currentRockVal = RockContains.Coin;
         }
         else if (choice == 1)
         {
-            Snake.SetActive(true);
-            Animator snakeAnimator = Snake.GetComponent<Animator>();
-            snakeAnimator.Play("redSnakeAnim");
-            GnomeMinigameManager.Instance.AddScore(SnakeData.scoreValue);
-            Debug.Log("Snake earned " + SnakeData.scoreValue + " points");
-
-            GnomeMinigameManager.Instance.SnakeFeedback.PlayFeedbacks();
+            currentRockVal = RockContains.Snake;
         }
         else if (choice == 2)
         {
-            Gnome.SetActive(true);
-            Animator gnomeAnimator = Gnome.GetComponent<Animator>();
-
-            float f = Random.Range(0f, 4f);
-
-            if (f < 1f)
-            {
-                gnomeAnimator.SetTrigger("Scary");
-                
-            }
-            else if (f >= 1f && f < 2f)
-            {
-                gnomeAnimator.SetTrigger("Moon");
-            }
-            else if (f >= 2f && f < 3f)
-            {
-                gnomeAnimator.SetTrigger("Drunk");
-            }
-            else
-            {
-                gnomeAnimator.SetTrigger("Happy");
-            }
-            
-            GnomeMinigameManager.Instance.AddScore(GnomeData.scoreValue);
-            Debug.Log("Gnome earned " + GnomeData.scoreValue + " points");
-            GnomeMinigameManager.Instance.GnomeFeedback.PlayFeedbacks();
-           
+            currentRockVal = RockContains.Gnome;
         }
+    }
+
+    public RockContains currentRockVal; 
+    
+    // when it's clicked, display the correct value and change the score
+    IEnumerator SelectSpawnedItem(float numberOfSeconds){
+        yield return new WaitForSeconds(numberOfSeconds);
+        ChooseDisplay();
+        
+        // disable the sprite
         _sprite.enabled = false;// SetActive(false);
         // set the lean touch manager to off too
         transform.GetComponentInParent<LeanSelectableByFinger>().enabled = false;
@@ -108,8 +89,78 @@ public class Rock : MonoBehaviour
         GnomeMinigameManager.Instance.Respawn(gameObject.transform.root.gameObject);
     }
 
+    private void ChooseDisplay()
+    {
+        if (currentRockVal == RockContains.Coin)
+        {
+            // coin has been randomly selected
+            currentRockVal = RockContains.Coin;
+            DisplayCoin();
+        }
+        else if (currentRockVal == RockContains.Snake)
+        {
+            // snake has been randomly selected
+            DisplaySnake();
+        }
+        else if (currentRockVal == RockContains.Gnome)
+        {
+            // gnome has been randomly selected
+            DisplayGnome();
+        }
+    }
 
-    public void Spawn()
+    private void DisplayCoin()
+    {
+        Coin.SetActive(true);
+        Animator coinAnimator = Coin.GetComponent<Animator>();
+        coinAnimator.Play("coinSpin");
+        GnomeMinigameManager.Instance.AddScore(CoinData.scoreValue);
+        GnomeMinigameManager.Instance.CoinFeedback.PlayFeedbacks();
+
+        Debug.Log("Coin earned " + CoinData.scoreValue + " points");
+    }
+    private void DisplayGnome()
+    {
+        Gnome.SetActive(true);
+        Animator gnomeAnimator = Gnome.GetComponent<Animator>();
+
+        float f = Random.Range(0f, 4f);
+
+        if (f < 1f)
+        {
+            gnomeAnimator.SetTrigger("Scary");
+        }
+        else if (f >= 1f && f < 2f)
+        {
+            gnomeAnimator.SetTrigger("Moon");
+        }
+        else if (f >= 2f && f < 3f)
+        {
+            gnomeAnimator.SetTrigger("Drunk");
+        }
+        else
+        {
+            gnomeAnimator.SetTrigger("Happy");
+        }
+
+        GnomeMinigameManager.Instance.AddScore(GnomeData.scoreValue);
+        //Debug.Log("Gnome earned " + GnomeData.scoreValue + " points");
+        GnomeMinigameManager.Instance.GnomeFeedback.PlayFeedbacks();
+    }
+
+    private void DisplaySnake()
+    {
+        Snake.SetActive(true);
+        Animator snakeAnimator = Snake.GetComponent<Animator>();
+        snakeAnimator.Play("redSnakeAnim");
+        GnomeMinigameManager.Instance.AddScore(SnakeData.scoreValue);
+        //Debug.Log("Snake earned " + SnakeData.scoreValue + " points");
+
+        GnomeMinigameManager.Instance.SnakeFeedback.PlayFeedbacks();
+    }
+
+
+    public void BreakRock()
     {
        _rockAnimator.SetTrigger("clicked");
        GnomeMinigameManager.Instance.RockBreakFeedback.PlayFeedbacks();

@@ -443,7 +443,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1013215408229444724}
         m_TargetAssemblyTypeName: Rock, Assembly-CSharp
-        m_MethodName: Spawn
+        m_MethodName: BreakRock
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
