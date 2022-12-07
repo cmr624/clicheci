@@ -17,7 +17,7 @@ MonoBehaviour:
   Weight: 50
   DataSet:
   - name: coin
-    scoreValue: 50
+    scoreValue: 150
     probability: 50
   - name: snake
     scoreValue: -25

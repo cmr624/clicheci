@@ -11,8 +11,8 @@ public class VulnerableZone : MonoBehaviour
     protected Animator bAnimator;
     public bool Vulnerable;
 
-    public UnityEvent OnFishEaten; 
-    
+    public UnityEvent OnFishEaten;
+    public UnityEvent OnBearHurt;
     private void Start()
     {
         b = FishMinigameManager.Instance.Bear;
@@ -40,14 +40,15 @@ public class VulnerableZone : MonoBehaviour
         if (other.CompareTag("BigFishy"))
         {
             // eat the bear
-            if (!b.IsDodging && !b.IsSwiping)
+            if (!b.IsDodging || b.IsSwiping)
             {
+                if (b.IsSwiping)
+                {
+                    bAnimator.SetBool("isSwiping", false);
+                }
+                OnBearHurt.Invoke();
                 // bear gets eaten
                 b.Ouchy();
-                other.gameObject.SetActive(false);
-            }else if (b.IsSwiping)
-            {
-                // swatted away
                 other.gameObject.SetActive(false);
             }
         }

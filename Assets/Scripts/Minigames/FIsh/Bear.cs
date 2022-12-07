@@ -87,19 +87,25 @@ public class Bear : MonoBehaviour
     }
 
     protected Vector3 _originalLoc;
+    
+    // the dodge animation currently
+    //move
     public void Move()
     {
-        LeanTween.moveX(gameObject, 5f, .2f);
+        LeanTween.moveX(gameObject, 5f, .1f);
+    }
+   // and move back (tween2) 
+    private void MoveBack()
+    {
+        LeanTween.moveX(gameObject, _originalLoc.x, .1f)
+            .setOnComplete((() => { IsDodging = false; }));
     }
     private IEnumerator SetDodgeBack(float seconds)
     {
        IsDodging = true;
        yield return new WaitForSeconds(seconds);
-       LeanTween.moveX(gameObject, _originalLoc.x, .4f)
-           .setOnComplete((() =>
-           {
-               IsDodging = false;
-           }));
+       MoveBack();
     }
-    
+
+   
 }

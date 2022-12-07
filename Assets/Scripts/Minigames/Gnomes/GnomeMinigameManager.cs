@@ -61,6 +61,10 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
         {
             StartCoroutine(DisplayTitleScreen());
         }
+        else
+        {
+            StartGame();
+        }
        
     }
 
@@ -93,6 +97,12 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
         {
             Debug.Log("Score is less than zero");
             GameOver();
+        }
+
+        if (_score > highScore)
+        {
+            
+            Debug.Log("SPECIAL MODE");
         }
     }
 
@@ -169,11 +179,16 @@ public class GnomeMinigameManager : MMSingleton<GnomeMinigameManager>
             .setOnComplete(() =>
             {
                 titleScreenGO.SetActive(false);
-                _timer = StartCoroutine(TimerComplete());
-                MusicFeedback.PlayFeedbacks();
+                StartGame();
             }); 
     
     
+    }
+
+    private void StartGame()
+    {
+        _timer = StartCoroutine(TimerComplete());
+        MusicFeedback.PlayFeedbacks();
     }
 
     public MMF_Player MusicFeedback;
