@@ -46,6 +46,7 @@ MonoBehaviour:
   AutomaticallyUnparentOnAwake: 0
   defaultScene: InbetweenCutscenes
   minigames:
+  - NightGnomeMinigameScene
   - Fish
   - GnomeMinigameScene
   - AppleDay
