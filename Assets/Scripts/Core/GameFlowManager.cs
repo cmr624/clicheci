@@ -14,6 +14,12 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
     public string[] minigames;
     private int currentMinigameIndexOrdered = -1;
 
+    public int CurrentMinigameIndexOrdered
+    {
+        get => currentMinigameIndexOrdered;
+        
+    }
+
 
     /**
      * CHAOS MODE
@@ -85,11 +91,11 @@ public class GameFlowManager : MMPersistentSingleton<GameFlowManager>
     public void LoadNextMinigame()
     {
         currentMinigameIndexOrdered++;
-        if (currentMinigameIndexOrdered >= minigames.Length - 1 && _inChaosMode)
+        if (currentMinigameIndexOrdered > minigames.Length - 1 && _inChaosMode)
         {
             currentMinigameIndexOrdered = 0;
         }
-        MMSceneLoadingManager.LoadScene(minigames[currentMinigameIndexOrdered], LoadingSceneName);
+        MMSceneLoadingManager.LoadScene(minigames[currentMinigameIndexOrdered]);
     }
 
     public string LoadingSceneName = "LoadingScreen";

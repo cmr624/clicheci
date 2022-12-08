@@ -92,7 +92,7 @@ public class Bear : MonoBehaviour
     //move
     public void Move()
     {
-        LeanTween.moveX(gameObject, 5f, .1f);
+        LeanTween.moveX(gameObject, 8f, .1f);
     }
    // and move back (tween2) 
     private void MoveBack()

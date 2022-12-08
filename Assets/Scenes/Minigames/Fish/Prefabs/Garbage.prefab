@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8038360814308330036}
   m_Layer: 0
   m_Name: Garbage
-  m_TagString: Doctor
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 518ded92e5dbf494e8f76a74d752272e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4039cb17431241a68a47ddd1f5f1659, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -97,7 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea05ff48b7f5f4177bfa6056d970e3f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToTravelArcInSeconds: 4
+  timeToTravelArcInSeconds: 3
+  RandomSpeed: 0
   Vulnerable: 0
 --- !u!61 &4373100037338925120
 BoxCollider2D:
@@ -116,7 +117,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 2.03, y: 1.55}
     newSize: {x: 0.64, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -144,4 +145,4 @@ MonoBehaviour:
   ExecuteOnDisable:
     m_PersistentCalls:
       m_Calls: []
-  LifeTime: 3
+  LifeTime: 4

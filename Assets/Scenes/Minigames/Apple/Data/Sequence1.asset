@@ -18,22 +18,18 @@ MonoBehaviour:
     TimerToSpawn: 0
     ScaleChange: 1
     WalkingTime: 1.5
-    Speed: 9.8
   - LocationFrom: 3r
     LocationTo: 3l
     TimerToSpawn: 4
-    ScaleChange: 1.5
+    ScaleChange: 1.2
     WalkingTime: 1
-    Speed: -40.5
   - LocationFrom: 2l
     LocationTo: 2r
     TimerToSpawn: 5
-    ScaleChange: 1.2
+    ScaleChange: 1.3
     WalkingTime: 1.5
-    Speed: 24.98
   - LocationFrom: 1r
     LocationTo: 1l
     TimerToSpawn: 2
     ScaleChange: 1.5
     WalkingTime: 1
-    Speed: -58.4

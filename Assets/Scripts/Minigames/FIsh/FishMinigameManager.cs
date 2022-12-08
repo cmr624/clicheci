@@ -58,8 +58,7 @@ public class FishMinigameManager :MMSingleton<FishMinigameManager>
     {
         while (!GameOver)
         {
-           // TODO randomize this!!!
-           yield return new WaitForSeconds(Random.Range(0f, timeBetweenSpawns));
+           yield return new WaitForSeconds(timeBetweenSpawns);
            GameObject nextSpawnedGameObject = _pooler.GetPooledGameObject();
            nextSpawnedGameObject.gameObject.SetActive(true);
            nextSpawnedGameObject.gameObject.GetComponent<MMPoolableObject>().TriggerOnSpawnComplete();     
