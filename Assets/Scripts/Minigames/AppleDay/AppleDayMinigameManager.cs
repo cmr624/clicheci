@@ -180,6 +180,7 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
             
             // make sure it's enabled (it gets disabled after it reaches a destination door)
             DrSr.enabled = true;
+            LeanTween.alpha(Doctor, 1f, .1f);
             // set the spawn position, from a string in the StepData called LocationFrom
             Doctor.transform.position = FindDoor(STEP.LocationFrom).position;
             
@@ -214,7 +215,11 @@ public class AppleDayMinigameManager : MMSingleton<AppleDayMinigameManager>
             {
                 yield break;
             }
-            DrSr.enabled = false;
+            
+            LeanTween.alpha(Doctor, 0f, .05f).setOnComplete(() =>
+            {
+                DrSr.enabled = false;
+            });
         }
         // you lose! because you didnt get the guy in time
         // play da game over screen

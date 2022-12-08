@@ -130,12 +130,11 @@ public class InbetweensManager : MonoBehaviour
         LeanTween.moveX(TVHeads_GO, tvHeadMovement, tvHeadMoveTime);
         
         //these are random now, but we could have the number correlate to the minigame that played before?
-        GameObject logoAnim = Logos[Random.Range(0, Logos.Count)] ;
+        GameObject logoAnim = Logos[GameFlowManager.Instance.CurrentMinigameIndexOrdered + 1];
 
-        StartCoroutine(AnimationTimer_GO(3.5f, logoAnim, true));
+        StartCoroutine(AnimationTimer_LogoGO(3.5f, logoAnim, true));
 
-        StartCoroutine(LoadNext(8f));
-         //TVHeadAnimator.GetCurrentAnimatorClipInfo().GetValue(0).
+        //TVHeadAnimator.GetCurrentAnimatorClipInfo().GetValue(0).
     }
 
     void PlayAgain()
@@ -159,10 +158,32 @@ public class InbetweensManager : MonoBehaviour
 
     }
 
+    public Transform LogoTransform;
+
+    public Camera camera;
+    private void ZoomOnLogo()
+    {
+        Vector3 targetPosition = new Vector3(-1.62f, 3.03f, -10f);
+        LeanTween.move(camera.gameObject,targetPosition, 2.8f);
+        LeanTween.value(camera.gameObject, camera.orthographicSize, 0.5f, 2.8f)
+            .setOnUpdate((flt) =>   {
+                camera.orthographicSize = flt;
+            });
+        //LeanTween.clerp(camera.k)
+    }
+    
+    IEnumerator AnimationTimer_LogoGO(float seconds, GameObject gameObject, bool myBool){
+        yield return new WaitForSeconds(seconds);
+        gameObject.SetActive(myBool);
+        ZoomOnLogo();
+        StartCoroutine(LoadNext(3f));
+    }
+
 
     IEnumerator AnimationTimer_GO(float seconds, GameObject gameObject, bool myBool){
         yield return new WaitForSeconds(seconds);
         gameObject.SetActive(myBool);
+        StartCoroutine(LoadNext(3f));
     }
 
     private IEnumerator LoadNext(float t)
