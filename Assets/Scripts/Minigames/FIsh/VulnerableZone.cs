@@ -19,13 +19,13 @@ public class VulnerableZone : MonoBehaviour
         bAnimator = b.GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Doctor"))
         {
             // we are in the valid zone
             Vulnerable = true;
-            Debug.Log("fish can be eaten");
+            //Debug.Log("fish can be eaten");
 
             if (b.IsSwiping)
             {
@@ -36,7 +36,6 @@ public class VulnerableZone : MonoBehaviour
                 //bAnimator.SetBool("isSwiping", true);
             }
         }
-
         if (other.CompareTag("BigFishy"))
         {
             // eat the bear
@@ -52,6 +51,27 @@ public class VulnerableZone : MonoBehaviour
                 other.gameObject.SetActive(false);
             }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Doctor"))
+        {
+            // we are in the valid zone
+            Vulnerable = true;
+            //Debug.Log("fish can be eaten");
+
+            if (b.IsSwiping)
+            {
+                //Destroy(other.gameObject);
+                OnFishEaten.Invoke();
+                other.gameObject.SetActive(false);
+                // TODO set some particle effect here
+                //bAnimator.SetBool("isSwiping", true);
+            }
+        }
+
+        
     }
 
     private void OnTriggerExit2D(Collider2D other){

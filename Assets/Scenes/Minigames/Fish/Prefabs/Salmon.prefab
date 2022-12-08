@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToTravelArcInSeconds: 2
+  RandomSpeed: 0
   Vulnerable: 0
 --- !u!61 &4373100037338925120
 BoxCollider2D:
