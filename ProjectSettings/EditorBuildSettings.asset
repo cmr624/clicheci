@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FLOW/IntroCutscene.unity
     guid: 41bad120bb7a848f3a6344911050edf7
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Gnome/NightGnomeMinigameScene.unity
+    guid: e2f7bd368f91649b596051c8833a5521
   m_configObjects: {}
