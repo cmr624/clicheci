@@ -91,6 +91,7 @@ public class CutsceneManager : MonoBehaviour
         case 2:
             Shot1.SetActive(false);
             shot1_text_GO.SetActive(false);
+            
             Shot2.SetActive(true);
             shot2_text_GO.SetActive(true);
 
