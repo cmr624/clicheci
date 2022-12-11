@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/Gnome/NightGnomeMinigameScene.unity
     guid: e2f7bd368f91649b596051c8833a5521
+  - enabled: 1
+    path: Assets/Scenes/Minigames/Microwave/MicrowaveScene.unity
+    guid: 02247f56b7e5f405c862ef456af4630f
   m_configObjects: {}
