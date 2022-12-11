@@ -57,7 +57,7 @@ TextureImporter:
       213: -5760822376872332732
     second: Fresh_WaterGames_17
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -78,6 +78,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -116,6 +117,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -131,6 +133,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -532,6 +558,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Fresh_WaterGames_7: -8053201356107773655
+      Fresh_WaterGames_1: 426818381008940943
+      Fresh_WaterGames_10: 1955967572277545463
+      Fresh_WaterGames_5: 4693654420447492793
+      Fresh_WaterGames_9: -8874599577867974858
+      Fresh_WaterGames_0: 4428851880567325261
+      Fresh_WaterGames_11: 8417630972438526174
+      Fresh_WaterGames_4: 3562967896212666439
+      Fresh_WaterGames_6: -7354573903606302990
+      Fresh_WaterGames_15: 8773181563268780137
+      Fresh_WaterGames_8: -4351965906870398706
+      Fresh_WaterGames_16: -5015807334340495492
+      Fresh_WaterGames_2: 649096759046905860
+      Fresh_WaterGames_13: 6397912391765886139
+      Fresh_WaterGames_17: -5760822376872332732
+      Fresh_WaterGames_12: -298483981111975919
+      Fresh_WaterGames_3: -6457901128924526992
+      Fresh_WaterGames_14: -7120723312049626589
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
