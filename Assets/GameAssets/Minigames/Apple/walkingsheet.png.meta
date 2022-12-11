@@ -63,7 +63,7 @@ TextureImporter:
       213: 5508189022410139515
     second: walkingsheet_19
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -84,6 +84,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -122,6 +123,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -161,6 +163,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -604,6 +618,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      walkingsheet_15: -7572843401722904096
+      walkingsheet_6: -4952441398259932205
+      walkingsheet_17: -3883606089407917302
+      walkingsheet_2: -2186902577713380106
+      walkingsheet_1: -487289833926518697
+      walkingsheet_5: -139674472712285144
+      walkingsheet_8: -7341980087662529529
+      walkingsheet_10: -5916808902684932416
+      walkingsheet_19: 5508189022410139515
+      walkingsheet_0: -7266158885042544494
+      walkingsheet_12: -4049432885480000146
+      walkingsheet_11: 7612413464583253583
+      walkingsheet_3: 7055656544776379163
+      walkingsheet_7: 1703191838106630072
+      walkingsheet_9: 3244216496133346191
+      walkingsheet_13: 2456290571810729580
+      walkingsheet_18: 1795807077512898240
+      walkingsheet_4: -768737511794116883
+      walkingsheet_16: -8335621363933352742
+      walkingsheet_14: -1244303575504900344
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

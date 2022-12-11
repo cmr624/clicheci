@@ -51,7 +51,7 @@ TextureImporter:
       213: 4463979659842035582
     second: BillSheet_15
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -72,6 +72,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -110,6 +111,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -149,6 +151,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -508,6 +522,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      BillSheet_2: 2733338369646274932
+      BillSheet_4: 8173902604917829215
+      BillSheet_3: 823718086570051503
+      BillSheet_8: -5276891349677079317
+      BillSheet_1: -2472673960154125572
+      BillSheet_14: -310444025150606755
+      BillSheet_15: 4463979659842035582
+      BillSheet_9: 4080292705409864583
+      BillSheet_13: -5185891930193367797
+      BillSheet_5: -624755447723901776
+      BillSheet_7: -4960180441859109014
+      BillSheet_10: -4375422658602308533
+      BillSheet_12: -1163096850307404484
+      BillSheet_0: -6771185078409337535
+      BillSheet_6: 3220510966436037750
+      BillSheet_11: 3267290222011897203
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -108,7 +108,7 @@ TextureImporter:
       213: 3429400784054130603
     second: Sheet_34
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -129,6 +129,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -167,6 +168,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -206,6 +208,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -964,6 +978,42 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Sheet_9: -7156045342858959276
+      Sheet_2: -6622732464455020030
+      Sheet_27: -913285195914314525
+      Sheet_10: 3719195470339505224
+      Sheet_0: -8644889942409211090
+      Sheet_3: 8222604357750818144
+      Sheet_16: 2329116044165841025
+      Sheet_11: 1731647788988222269
+      Sheet_20: -2810665635889312721
+      Sheet_1: 7180195895192826059
+      Sheet_7: 2451002373052964623
+      Sheet_21: 8956002981994491068
+      Sheet_18: -1333159919349879821
+      Sheet_32: 8722237637483000164
+      Sheet_29: -5718818064983718454
+      Sheet_23: -7906154960547828393
+      Sheet_5: -6033885931137250393
+      Sheet_6: 5923240033370958429
+      Sheet_34: 3429400784054130603
+      Sheet_13: 3193039239326454919
+      Sheet_33: -7942937549746915781
+      Sheet_22: 8996468492193918113
+      Sheet_25: -2741883451166865251
+      Sheet_14: -3058229962641959686
+      Sheet_8: 8108322230764480391
+      Sheet_26: 5255869592269291120
+      Sheet_15: 51363136116004566
+      Sheet_4: -4004527290698857321
+      Sheet_12: -1025951174003558675
+      Sheet_28: 7422246078151422202
+      Sheet_31: -1977535611198494484
+      Sheet_19: 1650403901147311243
+      Sheet_24: 4422321812067476563
+      Sheet_17: -7583837556227218809
+      Sheet_30: -587189176020860410
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

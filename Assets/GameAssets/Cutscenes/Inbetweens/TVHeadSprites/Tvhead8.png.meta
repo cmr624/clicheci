@@ -210,7 +210,7 @@ TextureImporter:
       213: -3092205228614559230
     second: Tvhead8_68
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -231,6 +231,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -269,6 +270,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -296,6 +298,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1768,6 +1782,76 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Tvhead8_5: -5686359951708398516
+      Tvhead8_54: 3953087197898292946
+      Tvhead8_61: 2378792327686310867
+      Tvhead8_35: -5337008403097455780
+      Tvhead8_0: 6974874996310028221
+      Tvhead8_49: -8381608627911323415
+      Tvhead8_15: -8211026177977589002
+      Tvhead8_56: -7539870201750671386
+      Tvhead8_16: 80002136718487256
+      Tvhead8_58: -2010892003156005141
+      Tvhead8_48: -5607797021137833004
+      Tvhead8_51: -6145095266401966631
+      Tvhead8_19: 1567979352952972089
+      Tvhead8_43: -4090898548387947385
+      Tvhead8_28: -8129431093268600529
+      Tvhead8_18: -1343542832497808592
+      Tvhead8_10: -6003091729025975952
+      Tvhead8_40: 2468604313506092365
+      Tvhead8_44: 6705718465060961189
+      Tvhead8_8: 1927781452828072697
+      Tvhead8_60: 2872381900627563252
+      Tvhead8_45: 7999500813536959780
+      Tvhead8_12: 4437720970182378096
+      Tvhead8_23: 7977866577181458559
+      Tvhead8_50: -7826733548855139786
+      Tvhead8_2: -6269890167467556588
+      Tvhead8_6: 5596753798265867141
+      Tvhead8_1: -7725559579124245820
+      Tvhead8_13: 6757471106963080069
+      Tvhead8_47: -2954436094579093951
+      Tvhead8_52: 817876573268674391
+      Tvhead8_30: -5488182318197363662
+      Tvhead8_55: -720192405034987641
+      Tvhead8_38: -8337886420470827098
+      Tvhead8_41: 6885676422102041614
+      Tvhead8_32: 1068597455717151203
+      Tvhead8_39: 7026457478886047065
+      Tvhead8_7: -2288334812255820966
+      Tvhead8_63: 4267528405587878622
+      Tvhead8_59: 4811920591943870938
+      Tvhead8_65: -6616578064788148011
+      Tvhead8_22: 5884146657891693848
+      Tvhead8_11: -3351732848355752525
+      Tvhead8_24: -7153619271669654114
+      Tvhead8_31: 4031268583125202990
+      Tvhead8_36: -7344400533122887837
+      Tvhead8_29: -4446430945745124742
+      Tvhead8_57: -8668324528387461481
+      Tvhead8_46: 902332583900739484
+      Tvhead8_4: -9040621210041683195
+      Tvhead8_14: -4763809165650259950
+      Tvhead8_67: 6436961206128842730
+      Tvhead8_64: -157513766961316137
+      Tvhead8_25: 8104420962895295338
+      Tvhead8_26: 8436356446650231271
+      Tvhead8_9: 357238879851644079
+      Tvhead8_20: -3736036241836254187
+      Tvhead8_34: -1728323604445135274
+      Tvhead8_27: 52379821633889940
+      Tvhead8_37: 3386619463085421092
+      Tvhead8_21: 1720038959605141093
+      Tvhead8_42: 2362965290684085392
+      Tvhead8_53: -4377844424654628192
+      Tvhead8_33: 2560758325035556181
+      Tvhead8_66: -5371108204987185899
+      Tvhead8_68: -3092205228614559230
+      Tvhead8_3: 5002036594443057743
+      Tvhead8_17: -8287890150326705740
+      Tvhead8_62: -8014219389279559234
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
