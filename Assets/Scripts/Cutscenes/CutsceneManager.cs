@@ -18,7 +18,7 @@ public class CutsceneManager : MonoBehaviour
 
     //YES, I KNOW THERE ARE PROBABLY BETTER WAYS TO DO THIS - Jesse
 
-    [Header("First Shot")]
+    /*[Header("First Shot")]
     [SerializeField] GameObject Shot1;
     [SerializeField] Animator shot1_CEO_Anim;
     [SerializeField] GameObject shot1_graph_Anim;
@@ -53,27 +53,27 @@ public class CutsceneManager : MonoBehaviour
     [SerializeField] GameObject Shot5;
     //[SerializeField] GameObject shot5_pitchRoomDoor;
     [SerializeField] GameObject shot5_text_GO;
-    public UnityEvent NeeextEvent;
+    public UnityEvent NeeextEvent;*/
 
    public Button nextButton;
 
     void Start()
     {
-       NextAnimation();
+       //NextAnimation();
        Button btn =  nextButton.GetComponent<Button>();
-       btn.onClick.AddListener(NextAnimation);
+     //  btn.onClick.AddListener(NextAnimation);
 
     }
 
-    void NextAnimation() {
-         //on click, trigger next animation
-        //cutsceneAnimator.SetInteger("AnimNum", animInt++);
-        animInt++;
-        AnimationEffects(animInt);
-    
-    }
+    // void NextAnimation() {
+    //      //on click, trigger next animation
+    //     //cutsceneAnimator.SetInteger("AnimNum", animInt++);
+    //     animInt++;
+    //     AnimationEffects(animInt);
+    //
+    // }
 
-    void AnimationEffects(int animationParameter) {
+    /*void AnimationEffects(int animationParameter) {
  
         //play sfx or begin anything else w
         switch (animationParameter)
@@ -148,16 +148,16 @@ public class CutsceneManager : MonoBehaviour
             break;
         }
 
-    }
+    }*/
 
-    IEnumerator AnimationTimer_GO(float seconds, GameObject gameObject, bool myBool, UnityEvent sound){
-        
-        yield return new WaitForSeconds(seconds);
-        
-        if (sound != null) {
-          sound.Invoke();  
-        }
-        gameObject.SetActive(myBool);
-
-    }
+    // IEnumerator AnimationTimer_GO(float seconds, GameObject gameObject, bool myBool, UnityEvent sound){
+    //     
+    //     yield return new WaitForSeconds(seconds);
+    //     
+    //     if (sound != null) {
+    //       sound.Invoke();  
+    //     }
+    //     gameObject.SetActive(myBool);
+    //
+    // }
 }
