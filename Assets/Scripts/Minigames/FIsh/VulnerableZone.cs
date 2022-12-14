@@ -46,9 +46,12 @@ public class VulnerableZone : MonoBehaviour
                     bAnimator.SetBool("isSwiping", false);
                 }
                 OnBearHurt.Invoke();
-                // bear gets eaten
-                b.Ouchy();
-                other.gameObject.SetActive(false);
+                if (!b.IsHurting)
+                {
+                    // bear gets eaten
+                    b.Ouchy();
+                    other.gameObject.SetActive(false);
+                }
             }
         }
     }

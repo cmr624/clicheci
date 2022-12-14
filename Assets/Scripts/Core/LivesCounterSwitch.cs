@@ -7,35 +7,35 @@ using UnityEngine.UI;
 public class LivesCounterSwitch : MonoBehaviour
 {
     public int NumberOfLives;
-    public GameObject[] ImagesArray;
+    public Image[] RedHeartArray;
+    public Image[] GreyHeartArray;
 
-    private List<Image> _imagesArr = new List<Image>();
-    private int _currentIndex;
+    private int _currentRedHeartIndex;
 
     private void Start()
     {
-        _currentIndex = ImagesArray.Length - 1;
-        foreach (var go in ImagesArray)
-        {
-           _imagesArr.Add(go.GetComponent<Image>()); 
-        }
+        _currentRedHeartIndex = RedHeartArray.Length - 1;
     }
 
+    public Image GameOverText;
     public void RemoveLife()
     {
         if (NumberOfLives > 0)
         {
-            _imagesArr[_currentIndex].enabled = false;
-           _currentIndex--;
-           NumberOfLives--;           
+            RedHeartArray[_currentRedHeartIndex].enabled = false;
+            GreyHeartArray[_currentRedHeartIndex].enabled = true;
+            _currentRedHeartIndex--;
+            
+            NumberOfLives--;           
+        }
+        if (NumberOfLives <= 0) 
+        {
+            foreach (var img in GreyHeartArray)
+            {
+                img.enabled = false;
+            }
+            GameOverText.enabled = true;
         }
     }
     
-    public void ResetImages()
-    {
-        foreach (var img in _imagesArr)
-        {
-           img.enabled = (true); 
-        }
-    }
 }

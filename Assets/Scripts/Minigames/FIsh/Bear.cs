@@ -14,6 +14,8 @@ public class Bear : MonoBehaviour
     [HideInInspector]
     public bool IsDodging = false;
 
+    [HideInInspector] public bool IsHurting = false;
+    
     public UnityEvent OnSwipe;
     public UnityEvent OnDodge;
 
@@ -50,14 +52,16 @@ public class Bear : MonoBehaviour
         
        _animator.SetBool("isHurt", true);
        OnHurt.Invoke();
+       IsHurting = true;
        StartCoroutine(SetHurtBack());
     }
 
     public AnimationClip HurtAnimationClip;
     private IEnumerator SetHurtBack()
     {
-        yield return new WaitForSeconds(HurtAnimationClip.length);
+        yield return new WaitForSeconds(1f);
         _animator.SetBool("isHurt", false);
+        IsHurting = false;
         FishMinigameManager.Instance.Lives--;
         if (FishMinigameManager.Instance.Lives == 0)
         {

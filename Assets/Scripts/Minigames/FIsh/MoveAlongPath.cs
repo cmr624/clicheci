@@ -10,11 +10,15 @@ public class MoveAlongPath : MonoBehaviour
     public float timeToTravelArcInSeconds;
 
     public bool RandomSpeed = false;
+    public float RandomRange = .1f;
     [HideInInspector]
     public bool Vulnerable = false;
+
+    private LeanTweenPath _arc;
     // Start is called before the first frame update
     void OnEnable()
     {
+        _arc = FishMinigameManager.Instance.GetRandomArc();
         MoveOnPath();
     }
 
@@ -23,11 +27,11 @@ public class MoveAlongPath : MonoBehaviour
         if (RandomSpeed)
         {
             
-            LeanTween.move(gameObject, FishMinigameManager.Instance.JumpArc.vec3, Random.Range(1f, timeToTravelArcInSeconds));
+            LeanTween.move(gameObject, _arc.vec3, Random.Range(timeToTravelArcInSeconds - RandomRange, timeToTravelArcInSeconds + RandomRange));
         }
         else
         {
-            LeanTween.move(gameObject, FishMinigameManager.Instance.JumpArc.vec3, timeToTravelArcInSeconds);
+            LeanTween.move(gameObject, _arc.vec3, timeToTravelArcInSeconds);
         }
     }
 

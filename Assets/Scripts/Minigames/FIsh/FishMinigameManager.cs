@@ -11,8 +11,15 @@ public class FishMinigameManager :MMSingleton<FishMinigameManager>
 
     public VulnerableZone VulnerableZone;
 
-    public LeanTweenPath JumpArc;
 
+    public LeanTweenPath[] JumpArcs;
+
+    public LeanTweenPath GetRandomArc()
+    {
+        int i = Random.Range(0, JumpArcs.Length - 1);
+        return JumpArcs[i];
+    }
+    
     protected MMMultipleObjectPooler _pooler;
 
     public int Lives;
